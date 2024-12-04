@@ -1,0 +1,156 @@
+.category-status-bar
+    margin: 16px 0
+    display: flex
+    white-space: nowrap
+    align-items: center
+    background: var(--flec-card-bg)
+    border-radius: 8px
+    padding: 0 12px
+    border: var(--style-border-always)
+    transition: .6s
+    box-shadow: var(--flec-shadow-border)
+
+    &:hover
+        border: var(--style-border-hover);
+        box-shadow: var(--flec-shadow-main);
+
+    .status-bar
+        padding: 0.4rem 0 0.4rem 0.4rem
+        white-space: nowrap
+        overflow: hidden
+        transition: .3s
+        width: 100%
+        justify-content: space-between
+        user-select: none
+        display: flex
+        align-items: center
+        font-size: 15px
+
+        #bar-box
+            white-space: nowrap
+            overflow-x: scroll
+            overflow-y: hidden
+            display: flex
+            border-radius: 8px
+            align-items: center
+            height: 30px
+
+            .status-bar-item
+                a
+                    padding: 0.1rem 0.5rem
+                    margin-right: 10px
+                    font-weight: 700
+                    border-radius: 8px
+                    display: flex
+                    align-items: center
+                    height: 30px
+                    color: var(--flec-fontcolor)
+                    opacity: .8
+                    transition: .6s
+
+                    &:hover
+                        background: var(--flec-theme)
+                        opacity: 1
+                        color: var(--flec-white)
+                        cursor: pointer
+
+                &.selected
+                    a
+                        background: var(--flec-theme) !important
+                        opacity: 1 !important
+                        color: var(--flec-white) !important
+                        pointer-events: none
+
+    #status-bar-button
+        margin-left: 12px
+        cursor: pointer
+        height: 22px
+        display: flex
+        align-items: center
+        transition: .6s
+
+        &:hover
+            color: var(--flec-theme)
+
+    .status-bar-more
+        margin-left: 12px
+        font-weight: 400
+        color: var(--flec-fontcolor)
+        opacity: .8
+        transition: .6s
+
+        &:hover
+            color: var(--flec-theme)
+
+#bar-box::-webkit-scrollbar
+    display: none
+
+.gallery-photos
+    width: 100%
+    text-align: center
+    animation: slide-in .6s .4s backwards
+
+    .gallery-photo
+        min-height: 5rem
+        width: 24.99%
+        padding: 4px
+        position: relative
+        animation: slide-in 0.6s 0.4s backwards
+
+        +maxWidth1024()
+            width: 33.3%
+
+        +maxWidth768()
+            width: 49.9%
+            padding: 3px
+
+        +minWidth2000()
+            width: 20%
+
+        &:hover
+            img
+	            transform: scale(1.1)
+
+        a
+            border-radius: 8px
+            border: var(--style-border-always)
+            box-shadow: var(--flec-shadow-border)
+            display: block
+            overflow: hidden
+            transition: .6s
+
+            &:hover
+                border-color: var(--flec-theme)
+                box-shadow: var(--flec-shadow-blue)
+
+            img
+                display: block
+                width: 100%
+                animation: fadeIn 1s
+                cursor: pointer
+                transition: all .4s ease-in-out
+
+        .photo-title,
+        .photo-time
+            max-width: calc(100% - 7px)
+            line-height: 1.8
+            position: absolute
+            left: 4px
+            font-size: 14px
+            background: rgba(0,0,0,0.3)
+            padding: 0px 8px
+            color: #fff
+            animation: fadeIn 1s
+
+        .photo-title
+            bottom:4px
+            border-radius: 0 8px 0 8px
+
+            +maxWidth768()
+                font-size: 12px
+                left: 3px
+                bottom: 3px
+
+        .photo-time
+            top:4px
+            border-radius: 8px 0 8px 0

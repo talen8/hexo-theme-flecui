@@ -1,0 +1,10 @@
+form#follow(action="https://api.follow.it/subscription-form/NnBzNHBHZmFFbVFjMjliQWhSc1pmTVZSYklEU1V6V1lrdlVOSkY0T2RZV3hISHpsbGlOaHNYR2RoWlN4R3M2OXRZTUg3TDY5K1luWEY4M0V0ZXphOGlUSGFJSko2ZExXcnIrK0xmMFlFUzFHcjJjeDZYY2RqZ1BycnoyNWtUSEp8dXVKZE51b29CdWlIc2lrT2xWdzJ2UzNkRlJpb3Q0ZTlvbzF3TEcwMXJjRT0=/8" method="post" target="_blank")
+    .follow-it-form-subscribe(style="position: relative;")
+        .heading
+            h5(style="font-weight: bold; text-align: center;") 订阅本站文章：
+        .input-field
+            input(type="email" name="email" placeholder="填入您的邮箱地址" spellcheck="false")
+        .submit-button
+            button(type="submit" onclick="ga('send','event', 'Form','Submit','Affiliate');" style="font-weight: bold; font-size: 14px; text-align: center;") 确认订阅
+    if is_page()
+        hr

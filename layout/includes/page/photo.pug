@@ -1,0 +1,22 @@
+include ../widgets/page/banner
+
+if theme.photo.bar.enable
+    .category-status-bar
+        .status-bar-tips= theme.photo.bar.tips
+        .status-bar
+            #bar-box
+                each item in theme.photo.bar.list
+                    - const content = item.split(' || ')
+                    .status-bar-item
+                        a(onclick="flec.photos('" + content[0] + "')") #{content[1]}
+        #status-bar-button(onclick="flec.statusbar('bar-box')")
+            i.flecicon.flec-right-two-arrow-line
+        if theme.photo.more.enable
+            - const contents = theme.photo.more.link.split(' || ')
+            if contents[0].startsWith('/')
+                a.status-bar-more(href="javascript:void(0)" onclick="pjax.loadUrl('" + contents[0] + "')") #{contents[1]}
+            else
+                a.status-bar-more(href=contents[0]) #{contents[1]}
+
+div.gallery-photos.page
+    img(src=theme.photo.loading style="margin:auto")

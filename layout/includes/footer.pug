@@ -1,0 +1,60 @@
+div#footer_deal
+    - var leftInfo = theme.footer && theme.footer.information && theme.footer.information.left || {}
+    - var rightInfo = theme.footer && theme.footer.information && theme.footer.information.right || {}
+
+    each value, label in leftInfo
+        - var array = value.split('||')
+        a.deal_link(href=url_for(trim(array[0])), title=label)
+            i.flecicon(class=array[1])
+
+    if theme.footer.information.author
+        div#footer_mini_logo.nolazyload.footer_mini_logo(title=_p('nav.backtop'), onclick="flec.toTop()")
+            img(src=theme.site.icon, alt=_p('nav.backtop'))
+
+    each value, label in rightInfo
+        - var array = value.split('||')
+        a.deal_link(href=url_for(trim(array[0])), title=label)
+            i.flecicon(class=array[1])
+div#st-footer
+    - var group = theme.footer && theme.footer.group ? theme.footer.group : {}
+
+    each value, x in group
+        div.footer-group
+            h3.footer-title= x
+            div.footer-links
+                each url, y in value
+                    a.footer-item(href=url_for(url), title=y)= y
+
+    if theme.footer && theme.footer.randomlink
+        div.footer-group
+            div.footer-title-group
+                h3.footer-title= _p('footer.randomlink')
+                button.random-friends-btn(onclick='randomLinksList()', title=_p('footer.randomlink'))
+                    i.flecicon.flec-refresh-line
+            div.footer-links#friend-links-in-footer
+div#footer-bar
+    div.footer-bar-links
+        div.footer-bar-left
+            if moment(theme.aside.siteinfo.runtime).year() === new Date().getFullYear()
+                div.copyright © #{moment(theme.aside.siteinfo.runtime).year()} By&nbsp;
+                    a.footer-bar-link(href=url_for("/"))= config.author
+            else
+                div.copyright © #{moment(theme.aside.siteinfo.runtime).year()} - #{new Date().getFullYear()} By&nbsp;
+                    a.footer-bar-link(href=url_for("/"))= config.author
+        div.footer-bar-right
+            each item in theme.footer.links
+                a.footer-bar-link(href=url_for(item.url), alt=item.name)!= item.name
+            a.footer-bar-link.cc(href=url_for(theme.footer.license), aria-label = 'copyright')
+                i.flecicon.flec-copyright-line
+                i.flecicon.flec-creative-commons-by-line
+                i.flecicon.flec-creative-commons-nc-line
+                i.flecicon.flec-creative-commons-nd-line
+if theme.footer.privacy
+    div.needEndHide#cookies-window
+        div.cookies-window-title= __('cookies.title')
+        div.cookies-window-content
+            span.cookies-tip= __('cookies.tip')
+            a.cookies-link(href=url_for(theme.footer.privacy), title=_p('cookies.privacy'))
+                i.flecicon.flec-right-btn-fill
+if theme.comment.use && theme.comment.commentBarrage
+    div.comment-barrage.needEndHide

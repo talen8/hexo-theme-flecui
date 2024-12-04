@@ -1,0 +1,28 @@
+- const {copyright} = theme.post.default
+.post-copyright
+    .post-copyright__author_group
+        a.post-copyright__author_img(href=url_for(copyright.author.url))
+            img.post-copyright__author_img_front(src=copyright.author.img || theme.site.icon)
+        .post-copyright__author_name= config.title
+        .post-copyright__author_desc= config.subtitle
+    .post-tools#post-tools
+        .post-tools-left
+            #quit-box(onclick="RemoveRewardMask()")
+            if theme.post.award.enable
+                include ./award
+            if theme.post.rss
+                .reward-link.mode
+                    a.reward-link-button(href=url_for(theme.post.rss))
+                        i.flecicon.flec-plant-fill
+                        = _p('footer.rss')
+    if copyright.enable || page.copyright
+        .post-copyright__notice
+            span.post-copyright-info
+                if page.reprint
+                    = _p('post.copyright.reprint')
+                else
+                    = _p('post.copyright.original')
+                    a(href=url_for(theme.post.default.copyright.licenurl))
+                        | #{theme.post.default.copyright.license}
+                    = _p('post.copyright.original_end')
+                    a(href=url_for("/")) #{config.title}

@@ -1,0 +1,40 @@
+#article-container
+  .btn-flec
+    position relative
+    padding 8px 15px
+    text-transform uppercase
+    border var(--style-border)
+    border-radius 10px
+    overflow hidden
+    transition all 0.3s
+    display inline-flex
+    justify-content center
+    align-items center
+
+    &.outline
+      background var(--flec-white)
+      color var(--flec-main)
+      border-color var(--flec-main)
+
+      &:hover
+        background var(--flec-main)
+        color var(--flec-white)
+        border-color var(--flec-main)
+
+    i
+      transition all 0.3s
+      padding-right 8px
+
+    span
+      transition all 0.3s
+
+    &:hover
+      background var(--flec-main)
+
+      span
+        transform all 0.3s ease-in-out
+        color var(--flec-white)
+
+      i
+        transform all 0.3s ease-in-out
+        color var(--flec-white)

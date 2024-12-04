@@ -1,0 +1,44 @@
+#about-page
+  .author-info
+    display flex
+    align-items center
+    margin 0 0 16px 0
+
+    .author-img
+      margin 0 30px
+      border-radius 50%
+      width 180px
+      height 180px
+      position relative
+      background var(--flec-secondbg)
+      user-select none
+      transition .3s
+
+      &:hover
+        transform scale(1.1)
+
+      &::before
+        content ''
+        transition 1s
+        width 30px
+        height 30px
+        background var(--flec-green)
+        position absolute
+        border-radius 50%
+        border 5px solid var(--flec-background)
+        bottom 5px
+        right 10px
+        z-index 2
+
+      +maxWidth768()
+        width 120px
+        height 120px
+
+        &::before
+          bottom -2px
+          right -2px
+          width 20px
+          height 20px
+
+      img
+        border-radius 200px

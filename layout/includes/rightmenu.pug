@@ -1,0 +1,80 @@
+- let custom_list = theme.right_menu.custom_list || []
+
+div#rightMenu
+    div.rightMenu-group.rightMenu-small
+        div.rightMenu-item#menu-backward
+            i.flecicon.flec-arrow-left-line
+        div.rightMenu-item#menu-forward
+            i.flecicon.flec-arrow-right-line
+        div.rightMenu-item#menu-refresh
+            i.flecicon.flec-refresh-line
+        div.rightMenu-item#menu-top
+            i.flecicon.flec-arrow-up-line
+    div.rightMenu-group.rightMenu-line.rightMenuPlugin
+        div.rightMenu-item#menu-copytext
+            i.flecicon.flec-copy-fill
+            span= _p('right_menu.copy')
+        div.rightMenu-item#menu-pastetext
+            i.flecicon.flec-paste-fill
+            span= _p('right_menu.paste')
+        if theme.comment.use
+            div.rightMenu-item#menu-commenttext
+                i.flecicon.flec-chat-quote-fill
+                span= _p('right_menu.comment')
+        div.rightMenu-item#menu-newwindow
+            i.flecicon.flec-window-fill
+            span= _p('right_menu.new')
+        div.rightMenu-item#menu-copylink
+            i.flecicon.flec-links-line
+            span= _p('right_menu.link')
+        div.rightMenu-item#menu-copyimg
+            i.flecicon.flec-copy-fill
+            span= _p('right_menu.img')
+        div.rightMenu-item#menu-downloadimg
+            i.flecicon.flec-download-cloud-fill
+            span= _p('right_menu.downloadImg')
+        if theme.search.enable
+            div.rightMenu-item#menu-search
+                i.flecicon.flec-search-line
+                span= _p('right_menu.search')
+        if theme.capsule.enable
+            div.rightMenu-item#menu-music-toggle
+                i.flecicon.flec-play-fill
+                span= _p('right_menu.music.start')
+            div.rightMenu-item#menu-music-back
+                i.flecicon.flec-skip-back-fill
+                span= _p('right_menu.music.back')
+            div.rightMenu-item#menu-music-forward
+                i.flecicon.flec-skip-forward-fill
+                span= _p('right_menu.music.forward')
+            div.rightMenu-item#menu-music-copyMusicName
+                i.flecicon.flec-copy-fill
+                span= _p('right_menu.music.copyMusicName')
+    div.rightMenu-group.rightMenu-line.rightMenuOther
+        each item,index in custom_list
+            div.rightMenu-item(id=item.id class=item.class onclick=item.click+'||rm.hideRightMenu()')
+                i.flecicon(class=item.icon)
+                span= item.name
+    div.rightMenu-group.rightMenu-line.rightMenuOther
+        if theme.right_menu.commentBarrage && theme.comment.use && theme.comment.commentBarrage
+            div.rightMenu-item#menu-commentBarrage(onclick="flec.switchCommentBarrage()")
+                i.flecicon.flec-chat-fill
+                span.menu-commentBarrage-text= _p('right_menu.barrage.close')
+        div.rightMenu-item#menu-darkmode(onclick="flec.switchDarkMode()")
+            i.flecicon.flec-moon-clear-fill
+            case theme.display_mode.type
+                when 'auto'
+                when 'light'
+                    span.menu-darkmode-text= _p('right_menu.light')
+                when 'dark'
+                    span.menu-darkmode-text= _p('right_menu.dark')
+        if theme.right_menu.translate.enable
+            div.rightMenu-item#menu-translate
+                case theme.right_menu.translate.defaultEncoding
+                    when 2
+                        i.flecicon.flec-fanti-line
+                        span= _p('right_menu.chs_to_cht')
+                    when 1
+                        i.flecicon.flec-jianti-line
+                        span= _p('right_menu.cht_to_chs')
+div#rightmenu-mask

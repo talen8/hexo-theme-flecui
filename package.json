@@ -1,0 +1,31 @@
+{
+  "name": "hexo-theme-flecui",
+  "version": "0.0.3",
+  "description": "A beautiful, powerful, and efficient Hexo theme developed by EverFu.",
+  "main": "package.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "flecui",
+    "Card UI Design",
+    "hexo-theme-flecui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valor-x/hexo-theme-flecui.git"
+  },
+  "dependencies": {
+    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-pug": "^3.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/valor-x/hexo-theme-flecui/issues",
+    "email": "o@efu.me"
+  },
+  "homepage": "https://talen.top/",
+  "author": "M.Talen",
+  "license": "MIT"
+}

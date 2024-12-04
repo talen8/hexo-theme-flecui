@@ -1,0 +1,35 @@
+- var archive = theme.aside.archive
+
+ul.card-archive-list
+    - var type = archive.type ? archive.type : 'year'
+    - var archiveData = getArchiveLength(type)
+    - var count = 0
+    - var totalValue = 0
+    - var displayedValue = 0
+    - var eighthKey = ''
+
+    each value, key in archiveData
+        - totalValue += value
+
+    each value, key in archiveData
+        if count < 7
+            li.card-archive-list-item
+                a.card-archive-list-link(href=`/archives/${key}/`)
+                    span.card-archive-list-date= key
+                    .card-archive-list-count-group
+                        span.card-archive-list-count= value
+                        span.card-archive-list-count-unit= __('console.archive_unit')
+            - displayedValue += value
+            - count++
+        else if count == 7
+            - eighthKey = key
+            li.card-archive-list-item(style="margin-left: 4%;")
+                a.card-archive-list-link(href=`/archives/${key}/`)
+                    span.card-archive-list-date= key + __('console.archive_unit_before')
+                    .card-archive-list-count-group
+                        span.card-archive-list-count= totalValue - displayedValue
+                        span.card-archive-list-count-unit= __('console.archive_unit')
+            - displayedValue += value
+            - count++
+        else
+            break

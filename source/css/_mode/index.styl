@@ -1,0 +1,98 @@
+[data-theme=dark]
+  --flec-theme $dark_theme
+  --flec-theme-op $dark_theme_op
+  --flec-theme-op-deep $dark_theme_op_deep
+  --flec-theme-none $dark_theme_none
+  --flec-bt-op #DEB247a8
+  --flec-blue #0084ff
+  --flec-red #ff3842
+  --flec-pink #d44040
+  --flec-green #3e9f50
+  --flec-purple #7a60d2
+  --flec-yellow #ffc93e
+  --flec-yellow-op #ffc93e30
+  --flec-orange #ff953e
+  --flec-fontcolor #f7f7fa
+  --flec-background #18171d
+  --flec-reverse #fff
+  --flec-maskbg rgba(0, 0, 0, 0.6)
+  --flec-maskbgdeep rgba(0, 0, 0, 0.85)
+  --flec-hovertext #0a84ff
+  --flec-ahoverbg #fff
+  --flec-lighttext var(--flec-theme)
+  --flec-secondtext #a1a2b8
+  --flec-scrollbar rgba(200, 200, 223, 0.4)
+  --flec-card-btn-bg #30343f
+  --flec-post-blockquote-bg #000
+  --flec-post-tabs-bg #121212
+  --flec-secondbg #30343f
+  --flec-secondbg-bg #21232a
+  --flec-shadow-nav 0 5px 20px 0px rgba(28, 28, 28, 0.4)
+  --flec-card-bg #1b1c20
+  --flec-card-bg-op var(--flec-white-op)
+  --flec-card-bg-none #1d1b2600
+  --flec-shadow-lightblack 0 5px 12px -5px rgba(102, 68, 68, 0.0)
+  --flec-shadow-light2black 0 5px 12px -5px rgba(102, 68, 68, 0.0)
+  --flec-card-border #3d3d3f
+  --flec-shadow-border 0 8px 16px -4px #00000050
+  --style-border 1px solid var(--flec-card-border)
+  --style-border-always 1px solid var(--flec-card-border)
+  --style-border-hover 1px solid var(--flec-theme)
+  --style-border-hover-always 1px solid var(--flec-theme)
+  --style-border-dashed 1px dashed var(--flec-theme-op)
+  --style-border-forever 2px solid var(--flec-lighttext)
+  --flec-hl-bg $hl_bg_dark
+  --flec-hltools-bg $hltools_bg_dark
+
+[data-theme=light]
+  --flec-theme $light_theme
+  --flec-theme-op $light_theme_op
+  --flec-theme-op-deep $light_theme_op_deep
+  --flec-theme-op-light #4259ef0d
+  --flec-theme-none $light_theme_none
+  --flec-bt-op #8042efa8
+  --flec-blue #425aef
+  --flec-red #f04a63
+  --flec-pink #ff7c7c
+  --flec-green #57bd6a
+  --flec-yellow #c28b00
+  --flec-yellow-op #d99c001a
+  --flec-orange #e38100
+  --flec-purple #7a60d2
+  --flec-fontcolor #363636
+  --flec-background #f7f9fe
+  --flec-reverse #000
+  --flec-maskbg rgba(255, 255, 255, 0.6)
+  --flec-maskbgdeep rgba(255, 255, 255, 0.85)
+  --flec-hovertext var(--flec-main)
+  --flec-ahoverbg #f7f7fa
+  --flec-lighttext var(--flec-main)
+  --flec-secondtext rgba(60, 60, 67, 0.8)
+  --flec-scrollbar rgba(60, 60, 67, 0.4)
+  --flec-card-btn-bg #edf0f7
+  --flec-post-blockquote-bg #fafcff
+  --flec-post-tabs-bg #f2f5f8
+  --flec-secondbg #f7f7f9
+  --flec-secondbg-bg var(--flec-secondbg)
+  --flec-shadow-nav 0 5px 12px -5px rgba(102, 68, 68, 0.05)
+  --flec-card-bg #fff
+  --flec-card-bg-op var(--flec-black-op)
+  --flec-card-bg-none rgba(255, 255, 255, 0)
+  --flec-shadow-lightblack 0 5px 12px -5px rgba(102, 68, 68, 0.00)
+  --flec-shadow-light2black 0 5px 12px -5px rgba(102, 68, 68, 0.00)
+  --flec-card-border #e3e8f7
+  --flec-shadow-border 0 8px 16px -4px #2c2d300c
+  --style-border 1px solid var(--flec-card-border)
+  --style-border-always 1px solid var(--flec-card-border)
+  --style-border-hover 1px solid var(--flec-main)
+  --style-border-hover-always 1px solid var(--flec-main)
+  --style-border-dashed 1px dashed var(--flec-theme-op)
+  --style-border-forever 2px solid var(--flec-main)
+  --flec-navbg var(--flec-theme-op)
+  --flec-hl-bg $hl_bg_light
+  --flec-hltools-bg $hltools_bg_light
+
+:root
+  +maxWidth768()
+    --style-border 0px solid var(--flec-none)
+    --style-border-hover 0px solid var(--flec-main)

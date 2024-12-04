@@ -1,0 +1,26 @@
+- const {key,option,title} = theme.tianli_talk
+
+span.needEndHide#flecTalk(onclick="togglePostChatContainer(); return false;" title=title)
+    i.flecicon.flec-robot
+    span.flecTalkTitle=title
+
+script.
+    var postChatConfig = {
+    backgroundColor: "var(--flec-main)",
+    bottom: "60px",
+    ...!{JSON.stringify(option)}
+    };
+
+    let b = true;
+
+    document.getElementById('flecTalk').addEventListener('click', function () {
+        this.classList.toggle('on');
+        let flec = this
+        b && setTimeout(() => {
+            document.getElementById('close-button').addEventListener('click', function () {
+                flec.classList.remove('on');
+            })
+        }, 0);
+        b = false
+    });
+script(pjax data-postChat_key=key src="https://ai.tianli0.top/static/public/postChatUser.min.js")
