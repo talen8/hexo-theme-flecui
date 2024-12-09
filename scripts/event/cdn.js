@@ -78,6 +78,11 @@ hexo.extend.filter.register('before_generate', () => {
             name: 'hexo-theme-flecui',
             file: 'js/third_party/envelope.min.js',
             version
+        },
+        chinese_lunar: {
+            name: 'hexo-theme-flecui',
+            file: 'js/third_party/chinese-lunar.js',
+            version
         }
     }
 

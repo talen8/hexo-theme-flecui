@@ -1,7 +1,7 @@
 div.banners-title
     div.banners-title-big!= theme.hometop.banner.title
-    div.banners-title-small= theme.hometop.banner.url
-- var group = theme.hometop.group
+    div.banners-title-small= theme.hometop.banner.text
+- var group = theme.hometop.banner.group
 if group
     div.banners-links
         each value,label in group

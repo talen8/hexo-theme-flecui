@@ -1,0 +1,24 @@
+- var custom = theme.nav.button.custom || []
+each item in custom
+    .nav-button(id=item.id)
+        a.site-page(href=url_for(item.url) || 'javascript:void(0);', onclick=item.onclick, title=item.title || '')
+            i.flecicon(class=item.icon || '')
+if theme.nav.button.random
+    .nav-button#randomPost_button
+        a.site-page(onclick="toRandomPost()", title=_p('nav.randompost'), href="javascript:void(0);")
+            i.flecicon.flec-dice-line
+if theme.search.enable
+    .nav-button#search-button
+        a.site-page.social-icon.search(href="javascript:void(0);", title=_p('nav.search'))
+            i.flecicon.flec-search-line
+if theme.nav.button.console
+    .nav-button#nav-console
+        a.console_switchbutton(onclick="flec.showConsole()", title=_p('nav.console'), href="javascript:void(0);")
+            i.flecicon.flec-layout-masonry-fill
+.nav-button#nav-totop(onclick="flec.toTop()")
+    a.totopbtn
+        i.flecicon.flec-arrow-up-line
+        span#percent= "0"
+#toggle-menu
+    a.site-page
+        i.flecicon.flec-menu-line

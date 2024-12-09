@@ -11,7 +11,7 @@ hexo.extend.filter.register('before_generate', () => {
         nav: {
             group: null,
             menu: null,
-            right: {
+            button: {
                 random: false,
                 console: false,
                 custom: [],
@@ -20,15 +20,15 @@ hexo.extend.filter.register('before_generate', () => {
         hometop: {
             enable: false,
             banner: {
-                title: 'FlecUI',
-                url: '一款简单的 Hexo 主题',
+                title: '前景可待<br>未来可期',
+                text: 'Hexo Theme FlecUI',
                 icon: null,
             },
             group: null,
             recommendList: {
                 sup: '置顶',
-                title: 'FlecUI Docs',
-                url: 'https://talen.top/',
+                title: 'FlecUI 主题文档',
+                url: 'https://flecui.talen.top/',
                 img: '/img/default.png',
                 color: 'none',
             }
@@ -40,16 +40,16 @@ hexo.extend.filter.register('before_generate', () => {
             },
             post: {
                 noSticky: 'about',
-                Sticky: 'allInfo'
+                Sticky: 'newestPost'
             },
             page: {
                 noSticky: 'about',
-                Sticky: 'allInfo'
+                Sticky: 'newestPost,allInfo'
             },
             card: {
                 style: 0,
                 author: {
-                    img: '/img/logo.png',
+                    img: '/img/avatar.png',
                     sticker: '/img/happy-sticker.png',
                 },
                 url: '/about/',
@@ -62,7 +62,13 @@ hexo.extend.filter.register('before_generate', () => {
                     goodnight: 'Good Night',
                 },
                 sayhello2: ['Welcome to FlecUI', 'A simple theme for Hexo', 'Enjoy your time', 'Have a nice day', 'Good luck'],
+                content: '永远相信美好的事情即将发生。',
                 information: null,
+                button: {
+                    enable: true,
+                    text: 'Subscribe to me',
+                    url: '/subscribe/'
+                }
             },
             flip: {
                 favicon: '',
@@ -76,9 +82,8 @@ hexo.extend.filter.register('before_generate', () => {
                 vague: true,
             },
             tags: {
-                enable: true,
+                enable: false,
                 limit: 20,
-                highlight: false,
                 list: [],
             },
             archive: {
@@ -87,19 +92,19 @@ hexo.extend.filter.register('before_generate', () => {
             },
             siteinfo: {
                 postcount: true,
-                wordcount: false,
+                wordcount: true,
                 pv: true,
                 uv: true,
                 updatetime: true,
                 runtimeenable: true,
-                runtime: "2023-04-20 00:00:00",
+                runtime: "2024-01-01 00:00:00",
             },
         },
         index_post_list: {
             direction: 'column',
+            cover: 'both',
             content: false,
-            length: 500,
-            cover: 'both'
+            length: 500
         },
         page: {
             error: true,
@@ -112,7 +117,7 @@ hexo.extend.filter.register('before_generate', () => {
         post: {
             default: {
                 cover: ['/img/default.png'],
-                locate: 'China, Changsha',
+                locate: 'China, Jining',
                 copyright: {
                     enable: true,
                     license: 'CC BY-NC-SA 4.0',
@@ -126,15 +131,18 @@ hexo.extend.filter.register('before_generate', () => {
                 wordcount: false,
                 readtime: false,
                 pv: false,
-                uv: false,
                 comment: false,
             },
             award: {
                 enable: false,
-                appreciators: '/',
                 title: '感谢您的赞赏。',
                 desc: '因为有你们的支持，我才体会到写文章的价值。',
+                appreciators: '/',
                 list: [],
+            },
+            share: {
+                enable: false,
+                list: []
             },
             rss: null,
             covercolor: {
@@ -142,26 +150,17 @@ hexo.extend.filter.register('before_generate', () => {
                 mode: 'local',
                 api: 'https://api.qjqq.cn/api/Imgcolor?img=',
                 time: 43200000,
-            },
-            footer: {
-                enable: true,
-                desc: "来自 Flec 的文章",
-                button: {
-                    enable: true,
-                    name: '返回首页',
-                    url: '/'
-                }
             }
         },
         theme_color: {
-            dark: "#ffc848",
-            dark_op: "#f2b94b23",
-            dark_op_deep: "#f2b94bdd",
-            dark_none: "#f2b94b00",
-            light: "#425AEF",
-            light_op: "#4259ef23",
-            light_op_deep: "#4259efdd",
-            light_none: "#4259ef01"
+            dark: "#DEB247",
+            dark_op: "#DEB24723",
+            dark_op_deep: "#DEB247DD",
+            dark_none: "#DEB24700",
+            light: "#8042EF",
+            light_op: "#8042EF23",
+            light_op_deep: "#8042EFDD",
+            light_none: "#8042EF01"
         },
         display_mode: {
             type: 'auto',
@@ -188,19 +187,23 @@ hexo.extend.filter.register('before_generate', () => {
             }]
         },
         errorpage: {
-            img: 'https://txycos.talen.top/web/404.png',
+            img: '/img/404.png',
             text: '404 Not Found',
             recommendList: true
         },
+        subscribe: {
+            follow: ''
+        },
         says: {
             enable: false,
+            strip: 30,
             home_mini: false,
-            style: 0,
-            strip: 30
+            style: 0
         },
         recent_comments: {
             enable: false,
             limit: 50,
+            cache: 0.2,
             console: false,
             page: '/recentcomments/'
         },
@@ -215,7 +218,7 @@ hexo.extend.filter.register('before_generate', () => {
         meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r",
         music: {
             enable: false,
-            id: '8407304077',
+            id: '1994908354',
             server: 'netease',
             type: 'playlist',
             volume: 0.8,
@@ -223,7 +226,7 @@ hexo.extend.filter.register('before_generate', () => {
         },
         capsule: {
             enable: false,
-            id: '8407304077',
+            id: '1994908354',
             server: 'netease',
             type: 'playlist',
         },
@@ -234,8 +237,8 @@ hexo.extend.filter.register('before_generate', () => {
         lazyload: {
             enable: false,
             field: 'site',
-            placeholder: 'https://txycos.talen.top/web/loading.gif',
-            errorimg: 'https://txycos.talen.top/web/error_load.png'
+            placeholder: '/img/loading.gif',
+            errorimg: '/img/error_load.webp'
         },
         loading: {
             fullpage: false,
@@ -257,6 +260,7 @@ hexo.extend.filter.register('before_generate', () => {
         },
         wordcount: false,
         busuanzi: false,
+        busuanzi_use: 0,
         search: {
             enable: false,
             type: 'local',
@@ -271,7 +275,7 @@ hexo.extend.filter.register('before_generate', () => {
             enable: false
         },
         copy: {
-            enable: true,
+            enable: false,
             copyright: {
                 enable: false,
                 limit: 50
@@ -279,9 +283,9 @@ hexo.extend.filter.register('before_generate', () => {
         },
         post_ai: {
             enable: false,
-            modelName: 'GPT 3',
-            key: 'your key',
-            talk: 'I am a AI.',
+            modelName: 'FlecGPT',
+            key: 'xxxxxxxxxxxx',
+            talk: 'I am FlecGPT.',
             randomPost: false,
             tips: 'AI is not perfect, please use it with caution.'
         },
@@ -295,6 +299,7 @@ hexo.extend.filter.register('before_generate', () => {
             commentBarrage: false,
             lazyload: false,
             count: false,
+            pv: false,
             avatar: 'https://cravatar.cn',
             newest_comment: {
                 enable: false,
@@ -327,6 +332,7 @@ hexo.extend.filter.register('before_generate', () => {
             site: 'your site-name',
             option: null,
         },
+        console_plus: false,
         verify_site: [],
         css_prefix: false,
         font: {

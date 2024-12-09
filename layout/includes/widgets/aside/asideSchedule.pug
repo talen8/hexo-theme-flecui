@@ -1,0 +1,28 @@
+.card-widget.card-schedule#card-widget-schedule
+  div#schedule-area-left
+    div#schedule-title 距离除夕
+    div#schedule-days
+    div#schedule-date 2025-01-28
+
+  div#schedule-area-right
+    div.schedule-r0
+      div.schedule-d0 本年
+      div.schedule-d1
+        span#p_span_year.aside-span1
+        span.aside-span2 还剩
+          a
+        progress#pBar_year(max="365")
+    div.schedule-r1
+      div.schedule-d0 本月
+      div.schedule-d1
+        span#p_span_month.aside-span1
+        span.aside-span2 还剩
+          a
+        progress#pBar_month(max="30")
+    div.schedule-r2
+      div.schedule-d0 本周
+      div.schedule-d1
+        span#p_span_week.aside-span1
+        span.aside-span2 还剩
+          a
+        progress#pBar_week(max="7")

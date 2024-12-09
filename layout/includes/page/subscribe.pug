@@ -1,26 +1,27 @@
-.rss-plan-list
-    a.rss-plan-item.rss-plan-wechat(href="/wechat/" title="公众号" target="_blank")
-        .rss-plan-description 推送精选文章<br>推送全文
-        .rss-plan-info-group
-            .rss-plan-title 公众号订阅
-            .rss-plan-info 推荐的订阅方式
-            img.rss-plan-icon.no-lightbox(src="https://txycos.talen.top/web/subscribeWeChat.webp")
-    a.rss-plan-item.rss-plan-mail(onclick="var submitBox = document.querySelector('.submit-box');if (submitBox.classList.contains('display')) {submitBox.classList.remove('display')} else {submitBox.classList.add('display')}" title="follow")
-        .rss-plan-description 推送全部文章<br>更新推送简介
-        .rss-plan-info-group
-            .rss-plan-title 邮件订阅
-            .rss-plan-info 推荐的订阅方式
-            img.rss-plan-icon.no-lightbox(src="https://txycos.talen.top/web/subscribeMail.webp")
-    a.rss-plan-item.rss-plan-rss(href="/atom.xml" title="rss" target="_blank")
-        .rss-plan-description 推送全部文章<br>推送简介
-        .rss-plan-info-group
-            .rss-plan-title RSS
-            .rss-plan-info 备用订阅方式
-            img.rss-plan-icon.no-lightbox(src="https://txycos.talen.top/web/subscribeRSS.webp")
+if theme.subscribe.enable
+    .rss-plan-list
+        a.rss-plan-item.rss-plan-wechat(href="/wechat/" title="公众号" target="_blank")
+            .rss-plan-description 推送精选文章<br>推送全文
+            .rss-plan-info-group
+                .rss-plan-title 公众号订阅
+                .rss-plan-info 推荐的订阅方式
+                img.rss-plan-icon.no-lightbox(src="https://txycos.talen.top/web/subscribeWeChat.webp")
+        a.rss-plan-item.rss-plan-mail(onclick="var submitBox = document.querySelector('.submit-box');if (submitBox.classList.contains('display')) {submitBox.classList.remove('display')} else {submitBox.classList.add('display')}" title="follow")
+            .rss-plan-description 推送全部文章<br>更新推送简介
+            .rss-plan-info-group
+                .rss-plan-title 邮件订阅
+                .rss-plan-info 推荐的订阅方式
+                img.rss-plan-icon.no-lightbox(src="https://txycos.talen.top/web/subscribeMail.webp")
+        a.rss-plan-item.rss-plan-rss(href="/atom.xml" title="rss" target="_blank")
+            .rss-plan-description 推送全部文章<br>推送简介
+            .rss-plan-info-group
+                .rss-plan-title RSS
+                .rss-plan-info 备用订阅方式
+                img.rss-plan-icon.no-lightbox(src="https://txycos.talen.top/web/subscribeRSS.webp")
 
-hr
+    hr
 
-.submit-box
-    include follow.pug
+    .submit-box
+        include follow.pug
 
-!= page.content
+    != page.content
