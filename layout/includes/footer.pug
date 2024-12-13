@@ -7,9 +7,9 @@ div#footer_deal
         a.deal_link(href=url_for(trim(array[0])), title=label)
             i.flecicon(class=array[1])
 
-    if theme.footer.information.author
+    if theme.footer.information.author.enable
         div#footer_mini_logo.nolazyload.footer_mini_logo(title=_p('nav.backtop'), onclick="flec.toTop()")
-            img(src=theme.site.icon, alt=_p('nav.backtop'))
+            img(src=theme.footer.information.author.image || theme.site.avatar, alt=_p('nav.backtop'))
 
     each value, label in rightInfo
         - var array = value.split('||')

@@ -1,18 +1,12 @@
-# ---------- 站点设置 site settings ---------- # start
+# 站点设置@start
 site:
-  ## Logo
-  name:
-    ## 显示类型
-    class: text    # i_class：图标 | text：文本 | img：图片
-    ## 显示内容
-    custom: FlecBLOG    # 参考值：图标（flec-logo）、文本（FlecBLOG）、图片（/img/logo.png）
-  ## 网页icon
-  siteIcon: /img/favicon.ico
-  ## 页脚、加载动画的Logo
-  icon: /img/avatar.png
-# ---------- 站点设置 site settings ---------- # end
+  ## Favicon
+  favicon: /img/favicon.ico
+  ## 头像
+  avatar: /img/avatar.png
+# 站点设置@end
 
-# ---------- 导航栏 NavBar ---------- # start
+# 导航栏 NavBar # start
 nav:
   ## 站点聚合
   group:
@@ -23,6 +17,11 @@ nav:
       FlecBLOG: https://talen.top || /img/favicon.ico
     # 类别:
     #   名称: 链接 || 图标
+
+  ## 页面LOGO
+  logo: 
+    class: text  # 显示类型  i_class | text | img
+    custom: FlecBLOG  # 显示内容  flec-logo | FlecBLOG | /img/logo.png
 
   ## 中心菜单
   menu:
@@ -51,9 +50,9 @@ nav:
     #   icon: flec-train-line # 图标
     #   onclick: # 点击事件
     #   id: travellings_button # id
-# ---------- 导航栏 NavBar ---------- # end
+# 导航栏 NavBar # end
 
-# ---------- 首页顶部 Home top ---------- # start
+# 首页顶部 Home top # start
 hometop:
   enable: false # 是否开启
   ## 技能陈列
@@ -124,9 +123,9 @@ hometop:
     img: /img/default.png
     ## 阴影颜色
     color: "none"
-# ---------- 首页顶部 Home top ---------- # end
+# 首页顶部 Home top # end
 
-# ---------- 侧边栏配置 Aside Settings ---------- # start
+# 侧边栏配置 Aside Settings # start
 aside:
   # 参考值：about（个人信息）、newestPost（最新文章）、allInfo（网站信息）、flip（公众号二维码）、calendar（日历日程）、ads（谷歌广告）
   # 说明：noSticky为侧边栏固定的信息（滑动不跟随），Sticky为侧边栏不固定的信息（滑动跟随）
@@ -236,9 +235,9 @@ aside:
     runtimeenable: true
     ## 格式：yyyy-MM-dd hh-mm-ss
     runtime: "2024-01-01 00:00:00"
-# ---------- 侧边栏配置 Aside Settings ---------- # end
+# 侧边栏配置 Aside Settings # end
 
-# ---------- 首页文章配置 Home Article Configuration ---------- # start
+# 首页文章配置 Home Article Configuration # start
 index_post_list:
   ## 文章方向    row：列表 | column：卡片
   direction: column
@@ -248,9 +247,9 @@ index_post_list:
   content: false
   ## 摘要截取长度
   length: 500
-# ---------- 首页文章配置 Home Article Configuration ---------- # end
+# 首页文章配置 Home Article Configuration # end
 
-# ---------- 页面默认设置 page default settings ---------- # start
+# 页面默认设置 page default settings # start
 page:
   ## 是否开启404页面
   error: true
@@ -263,9 +262,9 @@ page:
     ## 默认图片
     cover:
       - /img/default.png
-# ---------- 页面默认设置 page default settings ---------- # end
+# 页面默认设置 page default settings # end
 
-# ---------- 文章页默认设置 post default settings ---------- # start
+# 文章页默认设置 post default settings # start
 post:
   ## 基础默认设置
   default:
@@ -280,7 +279,7 @@ post:
       enable: true
       ## 作者信息设置
       author:
-        ## 显示头像，不填写默认显示site_icon
+        ## 显示头像，不填写默认显示avatar
         img:
         ## 头像跳转地址
         url: /about/ # 点击头像跳转地址
@@ -349,9 +348,9 @@ post:
     api: https://api.qjqq.cn/api/Imgcolor?img=
     ## 取色间隔（毫秒），默认为12小时
     time: 43200000
-# ---------- 文章页默认设置 post default settings ---------- # end
+# 文章页默认设置 post default settings # end
 
-# ---------- 主题配色 Theme color scheme  ---------- # start
+# 主题配色 Theme color scheme  # start
 theme_color:
   dark: "#DEB247" # 暗色模式
   dark_op: "#DEB24723" # 暗色模式透明
@@ -361,31 +360,33 @@ theme_color:
   light_op: "#8042EF23" # 亮色模式透明
   light_op_deep: "#8042EFDD" # 亮色模式透明深色
   light_none: "#8042EF01" # 亮色模式透明无色
-# ---------- 主题配色 Theme color scheme ---------- # end
+# 主题配色 Theme color scheme # end
 
-# ---------- 主题显示模式 theme display mode ---------- # start
+# 主题显示模式 theme display mode # start
 display_mode:
   ## 模式选择
   type: auto    # auto 自动切换 | dark 暗色模式 | light 亮色模式
   ## 星空背景，仅深色模式下生效
   universe: true
-# ---------- 主题显示模式调整 theme display mode ---------- # end
+# 主题显示模式调整 theme display mode # end
 
-# ---------- 文底推荐文章 Recommended articles at the bottom of the article ---------- # start
+# 文底推荐文章 Recommended articles at the bottom of the article # start
 related_post:
   enable: false
   ## 推荐文章数量
   limit: 2
   ## 推荐依据
   date_type: created    # created 创建日期 | updated 更新日期
-# ---------- 文底推荐文章 Recommended articles at the bottom of the article ---------- # end
+# 文底推荐文章 Recommended articles at the bottom of the article # end
 
-# ---------- 页脚配置 Footer Settings ---------- # start
+# 页脚配置 Footer Settings # start
 footer:
   ## 上方图标
   information:
     ## 中间site_icon是否显示
-    author: false
+    author: 
+      enable: false
+      image: /img/avatar.png
     left: # 左侧图标
       # 名称：链接 || 图标
       # Github: https://github.com/talen8 || flec-github-line
@@ -418,9 +419,9 @@ footer:
       url: https://github.com/talen8/hexo-theme-flecui
     # - name: 名称
     #   url: 跳转链接
-# ---------- 页脚配置 Footer Settings ---------- # end
+# 页脚配置 Footer Settings # end
 
-# ---------- 404页面 404page ---------- # start
+# 404页面 404page # start
 errorpage:
   ## 图片
   img: /img/404.png
@@ -428,16 +429,16 @@ errorpage:
   text: 糟糕 页面走丢了
   ## 推荐文章列表
   recommendList: true
-# ---------- 404页面 404page ---------- # end
+# 404页面 404page # end
 
-# ---------- 订阅页面 Subscription page ---------- # start
+# 订阅页面 Subscription page # start
 subscribe:
   ## 是否开启，开启前需完成相关配置
   enable: false
   follow: https://api.follow.it/subscription-form/NnBzNHBHZmFFbVFjMjliQWhSc1pmTVZSYklEU1V6V1lrdlVOSkY0T2RZV3hISHpsbGlOaHNYR2RoWlN4R3M2OXRZTUg3TDY5K1luWEY4M0V0ZXphOGlUSGFJSko2ZExXcnIrK0xmMFlFUzFHcjJjeDZYY2RqZ1BycnoyNWtUSEp8dXVKZE51b29CdWlIc2lrT2xWdzJ2UzNkRlJpb3Q0ZTlvbzF3TEcwMXJjRT0=/8
-# ---------- 订阅页面 Subscription page ---------- # end
+# 订阅页面 Subscription page # end
 
-# ---------- 即刻短文 talk now ---------- # start
+# 即刻短文 talk now # start
 says:
   ## 是否开启，开启前需完成相关配置
   enable: false
@@ -447,9 +448,9 @@ says:
   home_mini: false
   ## 样式
   style: 0    # 0:默认样式
-# ---------- 即刻短文 talk now ---------- # end
+# 即刻短文 talk now # end
 
-# ---------- 相册 albums ---------- # start
+# 相册 albums # start
 # photo相册页，开启前需完成相关配置
 photo: 
   enable: false
@@ -489,9 +490,9 @@ album:
     link: /photos/ || 相册
   # 相册加载loading图标
   loading: /img/loading.gif
-# ---------- 相册 albums ---------- # end
+# 相册 albums # end
 
-# ---------- 最近评论 recent comments ---------- # start
+# 最近评论 recent comments # start
 recent_comments:
   ## 是否开启，开启前需完成相关配置
   enable: false
@@ -503,9 +504,9 @@ recent_comments:
   console: true
   ## 最近评论页面
   page: /recentcomments/
-# ---------- 最近评论 recent comments ---------- # end
+# 最近评论 recent comments # end
 
-# ---------- 留言板 message board ---------- # start
+# 留言板 message board # start
 envelope:
   ## 是否开启，开启前需完成相关配置
   enable: false
@@ -514,9 +515,9 @@ envelope:
   hover: true # 鼠标悬停暂停
   loop: true # 循环播放
   page: /message/ # 留言板页面
-# ---------- 留言板 message board ---------- # end
+# 留言板 message board # end
 
-# ---------- 音乐 music ---------- # start
+# 音乐 music # start
 # meeting-api，用于音乐胶囊和音乐馆页
 meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r"
 # 音乐馆页
@@ -542,9 +543,9 @@ capsule:
   server: netease
   ## 播放列表的类型    song：单曲 | playlist：歌单 | album：专辑 | artist：歌手
   type: playlist
-# ---------- 音乐 music ---------- # end
+# 音乐 music # end
 
-# ---------- 快捷菜单 quick menu ---------- # start
+# 快捷菜单 quick menu # start
 keyboard:
   enable: false
   ## 键盘控制配置
@@ -566,9 +567,9 @@ keyboard:
     - name: 打开友情链接
       key: L
       url: "/links/"
-# ---------- 快捷菜单 quick menu ---------- # end
+# 快捷菜单 quick menu # end
 
-# ---------- 复制 Copy ---------- # start
+# 复制 Copy # start
 copy:
   enable: false
   ## 增加版权信息
@@ -576,9 +577,9 @@ copy:
     enable: false
     ## 字数，超过时生效
     limit: 50
-# ---------- 复制 Copy ---------- # end
+# 复制 Copy # end
 
-# ---------- 懒加载 lazyload ---------- # start
+# 懒加载 lazyload # start
 lazyload:
   enable: false
   ## 作用页面
@@ -587,17 +588,20 @@ lazyload:
   placeholder: /img/loading.gif
   ## 加载失败显示图片
   errorimg: /img/error_load.webp
-# ---------- 懒加载 lazyload ---------- # end
+# 懒加载 lazyload # end
 
-# ---------- 加载动画 loading animation ---------- # start
+# 加载动画 loading animation # start
 loading:
   ## 全局加载动画
-  fullpage: false
+  # fullpage: false
+  fullpage:
+    enable: true
+    image: /img/avatar.png
   ## 顶部加载胶囊
   pace: true
-# ---------- 加载动画 loading animation ---------- # end
+# 加载动画 loading animation # end
 
-# ---------- 代码高亮 code highlight ---------- # start
+# 代码高亮 code highlight # start
 highlight:
   enable: true
   ## 代码行高限制
@@ -610,19 +614,19 @@ highlight:
   theme: default  # default 默认 | mac 苹果终端
   ## 代码配色
   color: default  # default: 默认 | dark | funky | okaidia | tomorrow | twilight | darcula | solarized-dark | solarized-light | material | github
-# ---------- 代码高亮 code highlight ---------- # end
+# 代码高亮 code highlight # end
 
-# ---------- 图片灯箱（fancybox） image lightbox ---------- # start
+# 图片灯箱（fancybox） image lightbox # start
 # 介绍：https://fancyapps.com/fancybox/
 lightbox: false
-# ---------- 图片灯箱（fancybox） image lightbox ---------- # end
+# 图片灯箱（fancybox） image lightbox # end
 
-# ---------- mermaid标签插件 tags plugin ---------- # start
+# mermaid标签插件 tags plugin # start
 # 介绍：https://mermaid.js.org/
 mermaid: false
-# ---------- mermaid标签插件 tags plugin ---------- # end
+# mermaid标签插件 tags plugin # end
 
-# ---------- Open Graph-社交分享 ---------- # start
+# Open Graph-社交分享 # start
 # 介绍：https://ogp.me/
 # 使用：https://developers.facebook.com/docs/sharing/webmasters/
 OpenGraph:
@@ -636,21 +640,21 @@ OpenGraph:
   #  google_plus:
   #  fb_admins:
   #  fb_app_id:
-# ---------- Open Graph-社交分享 ---------- # end
+# Open Graph-社交分享 # end
 
-# ---------- 字数统计 word count ---------- # start
+# 字数统计 word count # start
 # 是否开启，开启前需安装字数统计插件
 wordcount: false
-# ---------- 字数统计 word count ---------- # end
+# 字数统计 word count # end
 
-# ---------- 访问统计 access statistics ---------- # start
+# 访问统计 access statistics # start
 ## 是否开启统计
 busuanzi: false
 ## 统计来源
 busuanzi_use: 0    # 0：原版 | 1：青秸(other: 其它自定义的busuanzi平台)
-# ---------- 访问统计 access statistics ---------- # end
+# 访问统计 access statistics # end
 
-# ---------- 搜索 search ---------- # start
+# 搜索 search # start
 # 是否开启，开启前需安装搜索插件
 search:
   enable: false
@@ -670,9 +674,9 @@ search:
     ## 是否启用预加载
     preload: false
     CDN:
-# ---------- 搜索 search ---------- # end
+# 搜索 search # end
 
-# ---------- Post Chat AI ---------- # start
+# Post Chat AI # start
 # 后台地址：https://ai.tianli0.top/
 tianli_talk:
   enable: false
@@ -689,9 +693,9 @@ tianli_talk:
     # showInviteLink: ''
     # blackDom:
     #   - .aplayer
-# ---------- Post Chat AI ---------- # end
+# Post Chat AI # end
 
-# ---------- 文章摘要AI post abstract AI ---------- # start
+# 文章摘要AI post abstract AI # start
 post_ai:
   enable: false
   ## 右侧模型名称
@@ -706,18 +710,18 @@ post_ai:
   report: 
   ## 底部提示
   tips: 此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结
-# ---------- 文章摘要AI post abstract AI ---------- # end
+# 文章摘要AI post abstract AI # end
 
-# ---------- latex公式支持 formula support ---------- # start
+# latex公式支持 formula support # start
 katex:
   enable: false
   ## 是否在每页都加载
   per_page: false
   ## 是否开启复制公式
   copytex: false
-# ---------- latex公式支持 formula support ---------- # end
+# latex公式支持 formula support # end
 
-# ---------- 评论 comment ---------- # start
+# 评论 comment # start
 comment:
   ## 选择评论系统
   use: # waline, twikoo, valine, artalk
@@ -766,14 +770,14 @@ artalk:
   server: # 后端地址
   site: # 站点名
   option: # options
-# ---------- 评论 comment ---------- # end
+# 评论 comment # end
 
-# ---------- 中控台扩展 Center console expansion ---------- # start
+# 中控台扩展 Center console expansion # start
 # 最新评论 + 标签 + 文章
 console_plus: false
-# ---------- 中控台扩展 Center console expansion ---------- # end
+# 中控台扩展 Center console expansion # end
 
-# ---------- 站点验证 Site verification ---------- # start
+# 站点验证 Site verification # start
 verify_site:
   # - name: baidu-site-verification
   #   content: xxxxxxxxxxxx
@@ -781,14 +785,14 @@ verify_site:
   #   content: xxxxxxxxxxxx
   # - name: google-site-verification
   #   content: xxxxxxxxxxxx
-# ---------- 站点验证 Site verification ---------- # end
+# 站点验证 Site verification # end
 
-# ---------- CSS 前缀 Prefix ---------- # start
+# CSS 前缀 Prefix # start
 # 开启后可增强浏览器兼容性，但会增加20%的体积
 css_prefix: false
-# ---------- CSS 前缀 Prefix ---------- # end
+# CSS 前缀 Prefix # end
 
-# ---------- 字体 Font ---------- # start
+# 字体 Font # start
 font:
   ## 字体大小
   font-size: 16px
@@ -798,9 +802,9 @@ font:
   font-family: 'PingFang SC,Hiragino Sans GB,Microsoft YaHei'
   ## 代码字体
   code-font-family: 'monospace, monospace'
-# ---------- 字体 Font ---------- # end
+# 字体 Font # end
 
-# ---------- PWA ---------- # start
+# PWA # start
 # 介绍：https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps
 pwa:
   enable: false
@@ -811,9 +815,9 @@ pwa:
   bookmark_icon: /img/pwa/favicon.ico # 书签图标
   favicon_32_32: /img/pwa/favicon_32.ico # 32x32图标
   favicon_16_16: /img/pwa/favicon_16.ico # 16x16图标
-# ---------- PWA ---------- # end
+# PWA # end
 
-# ---------- 谷歌广告 Google Adsense ---------- # start
+# 谷歌广告 Google Adsense # start
 google_adsense:
   enable: false
   ## 自动广告
@@ -831,9 +835,9 @@ google_adsense:
   client:  # ca-pub-XXXXXXXXXXXXXX
   ## slot id，需在关闭自动广告时填写
   slot:  # 123456789
-# ---------- 谷歌广告 Google Adsense ---------- # end
+# 谷歌广告 Google Adsense # end
 
-# ---------- 自定义右键菜单 Custom Right Menu ---------- # start
+# 自定义右键菜单 Custom Right Menu # start
 right_menu:
   enable: false
   ## 是否显示热评开关
@@ -867,9 +871,9 @@ right_menu:
     #   id:
     #   class:
     #   icon: flec-afdian-line
-# ---------- 自定义右键菜单 Custom Right Menu ---------- # end
+# 自定义右键菜单 Custom Right Menu # end
 
-# ---------- 网页黑白 Web page black and white ---------- # start
+# 网页黑白 Web page black and white # start
 memorial:
   enable: false
   # 日期, (M-D)
@@ -877,18 +881,18 @@ memorial:
     - "7-8" #七八卢沟桥事变
     - "9-18" #九一八事变/建军节
     - "12-13" #南京国家公祭日
-# ---------- 网页黑白 Web page black and white ---------- # end
+# 网页黑白 Web page black and white # end
 
-# ---------- 插入代码 Insert code ---------- # start
+# 插入代码 Insert code # start
 extends:
   ## 在head中插入
   head:
     # - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
   ## 在body中插入
   body:
-# ---------- 插入代码 Insert code ---------- # end
+# 插入代码 Insert code # end
 
-# ---------- CDN ---------- # start
+# CDN # start
 CDN:
   ## 主题内js的cdn配置
   internal: local  # local/jsdelivr/unpkg/cdnjs/custom
@@ -919,4 +923,4 @@ CDN:
     # swiper_js:
     # busuanzi_js:
     # snackbar_js:
-# ---------- CDN ---------- # end
+# CDN # end

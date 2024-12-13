@@ -9,7 +9,7 @@
                             .author-info__sayhi#author-info__sayhi(onclick="flec.changeSayHelloText()")= _p('sayhello.morning')
                 a.card-info-avatar(href=url_for(theme.aside.card.url) title=_p('aside.avatar'))
                     .avatar-img
-                        img(src=theme.aside.card.author.img alt=_p('aside.avatar'))
+                        img(src=theme.aside.card.author.img || theme.site.avatar alt=_p('aside.avatar'))
                     if theme.aside.card.author.sticker
                         .avatar-sticker
                             img.avatar-sticker-img(src=theme.aside.card.author.sticker, alt=_p('aside.sticker'))
@@ -43,7 +43,7 @@
                     .author-info__top-group
                         .author-info__sayhi#author-info__sayhi(onclick="flec.changeSayHelloText()")= _p('sayhello.morning')
                 .avatar-img-group
-                    img.avatar-img(alt=_p('aside.avatar'), src=theme.aside.card.author.img)
+                    img.avatar-img(alt=_p('aside.avatar'), src=theme.aside.card.author.img || theme.site.avatar)
                     if theme.aside.card.author.sticker
                         .avatar-sticker
                             img.avatar-sticker-img(src=theme.aside.card.author.sticker, alt=_p('aside.sticker'))

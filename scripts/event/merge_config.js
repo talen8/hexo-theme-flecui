@@ -1,15 +1,15 @@
 hexo.extend.filter.register('before_generate', () => {
     const defaultConfig = {
         site: {
-            name: {
-                class: 'text',
-                custom: 'FlecUI'
-            },
-            siteIcon: '/img/pwa/favicon.ico',
-            icon: 'icon'
+            favicon: '/img/favicon.ico',
+            avatar: '/img/avatar.png'
         },
         nav: {
             group: null,
+            logo: {
+                class: 'text',
+                custom: 'FlecUI'
+            },
             menu: null,
             button: {
                 random: false,
@@ -173,7 +173,10 @@ hexo.extend.filter.register('before_generate', () => {
         },
         footer: {
             information: {
-                author: false,
+                author: {
+                    enable: false,
+                    image: '/img/avatar.png',
+                },
                 left: null,
                 right: null,
             },
@@ -241,7 +244,10 @@ hexo.extend.filter.register('before_generate', () => {
             errorimg: '/img/error_load.webp'
         },
         loading: {
-            fullpage: false,
+            fullpage: {
+                enable: false,
+                image: '/img/avatar.png',
+            },
             pace: true,
         },
         highlight: {
