@@ -1,28 +1,26 @@
-# 站点设置@start
+# 站点配置@start
 site:
   ## Favicon
   favicon: /img/favicon.ico
   ## 头像
   avatar: /img/avatar.png
-# 站点设置@end
+# 站点配置@end
 
-# 导航栏 NavBar # start
+# 导航配置@start
 nav:
   ## 站点聚合
   group:
     项目:
-      FlecUI: https://github.com/talen8/FlecUI || /img/favicon.ico
+      FlecUI: https://github.com/talen8/hexo-theme-flecui || /img/favicon.ico
     演示:
-      FlecUI_Demo: https://talen8.github.io || /img/favicon.ico
+      FlecUI_Demo: https://flecui-demo.talen.top/ || /img/favicon.ico
       FlecBLOG: https://talen.top || /img/favicon.ico
     # 类别:
     #   名称: 链接 || 图标
-
   ## 页面LOGO
   logo: 
-    class: text  # 显示类型  i_class | text | img
-    custom: FlecBLOG  # 显示内容  flec-logo | FlecBLOG | /img/logo.png
-
+    class: text # 显示类型  i_class | text | img
+    custom: FlecBLOG # 显示内容  flec-logo | FlecBLOG | /img/logo.png
   ## 中心菜单
   menu:
     首页: /
@@ -35,14 +33,12 @@ nav:
       宝藏博主: javascript:travelling() || flec-gift-fill
     我的:
       关于本站: /about/ || flec-contacts-fill
-    # 显示名称: 路径
-    # 显示名称:
-    #   子菜单名称: 路径 || 图标
-
+    # 菜单:
+    #   菜单项: 路径 || 图标
   ## 功能按钮
   button:
     random: false # 随机文章跳转
-    console: false #控制台
+    console: false # 控制台
     # 自定义按钮（左至右）
     custom:
     # - name: 开往 - 友链接力 # 显示文字
@@ -50,24 +46,22 @@ nav:
     #   icon: flec-train-line # 图标
     #   onclick: # 点击事件
     #   id: travellings_button # id
-# 导航栏 NavBar # end
+# 导航配置@end
 
-# 首页顶部 Home top # start
+# 首页顶部@start
 hometop:
-  enable: false # 是否开启
+  enable: true # 是否开启
   ## 技能陈列
   banner:
-    ## 左上大文字（可用html标签）
-    title: 前景可待<br>未来可期
-    ## 左上小文字
-    text: Hexo Theme FlecUI
+    title: 前景可待<br>未来可期 # 左上大文字（可用html标签）
+    text: Hexo Theme FlecUI # 左上小文字
     ## 左下跳转按钮
     group:
-      # 名称: /路径/ || 图标 || 颜色
       热门: /tags/热门/ || flec-fire-fill || linear-gradient(to right,#f65,#ffbf37)
       教程: /tags/教程/ || flec-book-mark-fill || linear-gradient(to right,#358bff,#15c6ff)
       精选: /tags/精选/ || flec-star-smile-fill || linear-gradient(to right,#18e7ae,#1eebeb)
-    ## 右侧轮播icon（76x76）
+      # 名称: /路径/ || 图标 || 颜色
+    ## 右侧轮播图标（76x76）
     icon:
       # 名称:
       #   img: 图片
@@ -113,19 +107,14 @@ hometop:
         color: '#31a8ff'
   ## 置顶列表（文章的置顶需要在文章front matter中添加“recommend: true”）
   recommendList:
-    ## 左下小文字
-    sup: 置顶
-    ## 左下大文字
-    title: FlecUI 主题文档
-    ## 点击跳转链接
-    url: https://flecui.talen.top/
-    ## 显示背景图片
-    img: /img/default.png
-    ## 阴影颜色
-    color: "none"
-# 首页顶部 Home top # end
+    sup: 置顶 # 左下小文字
+    title: FlecUI 主题文档 # 左下大文字
+    url: https://flecui.talen.top/ # 点击跳转链接
+    img: /img/default.png # 背景图片
+    color: "none" # 阴影颜色
+# 首页顶部@end
 
-# 侧边栏配置 Aside Settings # start
+# 侧边栏@start
 aside:
   # 参考值：about（个人信息）、newestPost（最新文章）、allInfo（网站信息）、flip（公众号二维码）、calendar（日历日程）、ads（谷歌广告）
   # 说明：noSticky为侧边栏固定的信息（滑动不跟随），Sticky为侧边栏不固定的信息（滑动跟随）
@@ -137,26 +126,21 @@ aside:
   post:
     noSticky: "about"
     Sticky: "newestPost"
-  ## 页面中显示的侧边栏内容
+  ## 页面页中显示的侧边栏内容
   page:
     noSticky: "about"
     Sticky: "newestPost,allInfo"
   ## 侧边栏位置
-  position: right    # left：左侧 | right：右侧
+  position: right # left：左侧 | right：右侧
   ## 个人信息卡片
   card:
-    ## 样式选择
-    style: 0    # 0：默认样式 | 1：HEO同款样式
+    style: 0 # 样式选择  0：默认样式 | 1：HEO同款样式
     ## 头像设置
     author:
-      ## 头像图片
-      img: /img/avatar.png
-      ## 表情图片（26x26），不填不显示
-      sticker: /img/happy-sticker.png
-    ## 头像跳转链接
-    url: /about/
-    ## 背景图片，不填不显示
-    background:
+      img: /img/avatar.png # 头像图片
+      sticker: /img/happy-sticker.png # 表情图片（26x26）
+    url: /about/ # 头像跳转链接
+    background: # 背景图片，不填不显示
     ## 顶部按钮打招呼语句
     sayhello:
       morning: 一日之计在于晨
@@ -164,13 +148,12 @@ aside:
       afternoon: 集中精力，攻克难关
       night: 不要太劳累了，早睡更健康
       goodnight: 睡个好觉，保证精力充沛
-    ## 顶部按钮点击切换文字
+    ## 顶部按钮点击切换语句
     sayhello2:
      - 目之所及，皆是回忆
      - 心之所想，皆是过往
      - 眼之所看，皆是遗憾
-    ## 介绍文本，支持HTML标签，仅style为1时生效
-    content: 永远相信美好的事情即将发生。
+    content: 永远相信美好的事情即将发生。 # 介绍文本，支持HTML标签，仅style为1时生效
     ## 社交图标，不要超过4个
     information:
       # 名称：链接 || 图标
@@ -178,115 +161,83 @@ aside:
       Github: https://github.com/talen8 || flec-github-line
     ## 关注按钮，仅style为0时生效
     button:
-      enable: true
-      text: 订阅本站
-      url: /subscribe/
-
+      enable: true # 是否开启
+      text: 订阅本站 # 按钮文本
+      url: /subscribe/ # 跳转链接
   ## 二维码卡片
   flip:
-    ## 右下角头像
-    favicon:
-    ## 正面
-    face:
-    ## 翻转图片
-    backface:
-    ## 背景色  参考值：var(--flec-blue)、#000、rgba(0,0,0,0.5)、linear-gradient(to right,#f65,#ffbf37)
-    backcolor: "var(--flec-blue)"
-
+    favicon: # 右下角头像
+    face: # 正面图片
+    backface: # 翻转图片
+    backcolor: "var(--flec-blue)" # 背景颜色
   ## 目录卡片
   toc:
-    ## 在文章页显示
-    post: true
-    ## 在任意页显示
-    page: false
-    ## 模糊效果
-    vague: true
-
+    post: true # 在文章页显示
+    page: false # 在页面页显示
+    vague: true # 模糊效果
   ## 网站信息卡片-标签
   tags:
-    ## 是否显示标签
-    enable: false
-    ## 显示标签数量，当高于标签总数时，显示全部标签按钮
-    limit: 20
-    ## 高亮显示标签列表
+    enable: false # 是否显示标签
+    limit: 20 # 显示标签最大数，高于此值显示全部标签按钮
+    ## 高亮显示标签
     highlight_list:
      - Hexo
+     - Hexo
+
+      - Hexo
 
   ## 网站信息卡片-归档
   archive:
-    ## 是否显示归档
-    enable: false
-    ## 显示类型  参考值：month按月、year按年
-    type: "month"
-
+    enable: false # 是否显示归档
+    type: "month" # 显示类型  month按月 | year按年
   ## 网站信息卡片-建站信息
   siteinfo:
-    ## 文章数
-    postcount: true
-    ## 总字数
-    wordcount: true
-    ## 访问量PV
-    pv: true
-    ## 访客数UV
-    uv: true
-    ## 最后更新日期
-    updatetime: true
-    ## 建站时间
-    runtimeenable: true
-    ## 格式：yyyy-MM-dd hh-mm-ss
-    runtime: "2024-01-01 00:00:00"
-# 侧边栏配置 Aside Settings # end
+    postcount: true # 文章数
+    wordcount: true # 总字数
+    pv: true # 访问量PV
+    uv: true # 访客数UV
+    updatetime: true # 最后更新日期
+    runtimeenable: true # 建站时间
+    runtime: "2024-01-01 00:00:00" # 格式：yyyy-MM-dd hh-mm-ss
+# 侧边栏@end
 
-# 首页文章配置 Home Article Configuration # start
+# 首页文章配置@start
 index_post_list:
-  ## 文章方向    row：列表 | column：卡片
-  direction: column
-  ## 文章封面    left：左侧 | right在：右侧 | both：两侧交替
-  cover: both
-  ## 文章摘要    1：手动填写 | 2：自动获取 | 3：截取内容 | false：不显示
-  content: false
-  ## 摘要截取长度
-  length: 500
-# 首页文章配置 Home Article Configuration # end
+  direction: column # 文章方向  row：列表 | column：卡片
+  cover: both # 文章封面  left：左侧 | right在：右侧 | both：两侧交替
+  content: false # 文章摘要  1：手动填写 | 2：自动获取 | 3：截取内容 | false：不显示
+  length: 500  # 摘要截取长度
+# 首页文章配置@end
 
-# 页面默认设置 page default settings # start
+# 页面配置@start
 page:
-  ## 是否开启404页面
-  error: true
-  ## 是否开启标签页
-  tags: true
-  ## 是否开启分类页
-  categories: true
-  ## 默认值
+  error: true # 是否开启404页面
+  tags: true # 是否开启标签页
+  categories: true # 是否开启分类页
+  ## 默认设置
   default:
     ## 默认图片
     cover:
       - /img/default.png
-# 页面默认设置 page default settings # end
+# 页面配置@end
 
-# 文章页默认设置 post default settings # start
+# 文章配置@start
 post:
-  ## 基础默认设置
+  ## 默认设置
   default:
     ## 文章默认图片
     cover:
       - /img/default.png
-    ## 文章发布默认地址
-    locate: 济宁
+    locate: 济宁 # 文章发布默认地址
     ## 文章默认版权
     copyright:
-      ## 版权是否开启
-      enable: true
+      enable: true # 是否开启
       ## 作者信息设置
       author:
-        ## 显示头像，不填写默认显示avatar
-        img:
-        ## 头像跳转地址
-        url: /about/ # 点击头像跳转地址
-      ## 许可协议
-      license: CC BY-NC-SA 4.0
-      ## 许可协议链接
-      licenurl: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
+        img: # 显示头像，不填写默认显示avatar
+        url: /about/ # 头像跳转地址
+      license: CC BY-NC-SA 4.0 # 许可协议
+      licenurl: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh # 许可协议链接
   ## 顶部文章信息
   meta:
     date: false # 发布日期
@@ -298,14 +249,10 @@ post:
     comment: false # 评论数
   ## 打赏
   award:
-    ## 是否开启打赏
-    enable: false
-    ## 赞赏标题
-    title: 感谢您的赞赏。
-    ## 赞赏名单小文字
-    desc: 因为有你们的支持，我才体会到写文章的价值。
-    ## 赞赏名单跳转
-    appreciators: /about
+    enable: false # 是否开启打赏
+    title: 感谢您的赞赏。 # 赞赏标题
+    desc: 因为有你们的支持，我才体会到写文章的价值。 # 赞赏名单小文字
+    appreciators: /about # 赞赏名单跳转
     ## 赞赏方式
     list:
       # - name: 方式名称
@@ -326,8 +273,7 @@ post:
       #   color: var(--flec-black)
   ## 分享按钮
   share:
-    ## 是否开启分享按钮
-    enable: false
+    enable: false # 是否开启分享按钮
     ## 分享按钮列表
     list:
     #  - qq
@@ -337,53 +283,20 @@ post:
     #  - telegram
     #  - whatsapp
     #  - linkedin
-  ## 订阅按钮跳转链接
-  rss: # /atom.xml
+  rss: /atom.xml # 订阅按钮跳转链接
   ## 文章主题色获取
   covercolor:
     enable: false
-    ## 取色方式  参考值：local为本地取色，api为img2color取色
-    mode: local    # local：本地取色 | api：img2color取色
-    ## api地址
-    api: https://api.qjqq.cn/api/Imgcolor?img=
-    ## 取色间隔（毫秒），默认为12小时
-    time: 43200000
-# 文章页默认设置 post default settings # end
+    mode: local # 取色方式  local：本地取色 | api：img2color取色
+    api: https://api.qjqq.cn/api/Imgcolor?img= # api地址
+    time: 43200000 # 取色间隔（毫秒），默认为12小时
+# 文章配置@end
 
-# 主题配色 Theme color scheme  # start
-theme_color:
-  dark: "#DEB247" # 暗色模式
-  dark_op: "#DEB24723" # 暗色模式透明
-  dark_op_deep: "#DEB247DD" # 暗色模式透明深色
-  dark_none: "#DEB24700" # 暗色模式透明无色
-  light: "#8042EF" # 亮色模式
-  light_op: "#8042EF23" # 亮色模式透明
-  light_op_deep: "#8042EFDD" # 亮色模式透明深色
-  light_none: "#8042EF01" # 亮色模式透明无色
-# 主题配色 Theme color scheme # end
-
-# 主题显示模式 theme display mode # start
-display_mode:
-  ## 模式选择
-  type: auto    # auto 自动切换 | dark 暗色模式 | light 亮色模式
-  ## 星空背景，仅深色模式下生效
-  universe: true
-# 主题显示模式调整 theme display mode # end
-
-# 文底推荐文章 Recommended articles at the bottom of the article # start
-related_post:
-  enable: false
-  ## 推荐文章数量
-  limit: 2
-  ## 推荐依据
-  date_type: created    # created 创建日期 | updated 更新日期
-# 文底推荐文章 Recommended articles at the bottom of the article # end
-
-# 页脚配置 Footer Settings # start
+# 页脚配置@start
 footer:
   ## 上方图标
   information:
-    ## 中间site_icon是否显示
+    ## 头像
     author: 
       enable: false
       image: /img/avatar.png
@@ -407,50 +320,370 @@ footer:
     #   Cookies: /cookies/
     #   用户协议: /privacy/
     #   版权协议: /copyright/
-  ## 随机友链，打开前需先配置links
+  ## 随机友链，开启前需先配置links
   randomlink: false
   ## 隐私助手弹窗跳转
   privacy: # /privacy/
-  # 版权(Copyright)跳转
+  ## 版权(Copyright)跳转
   license: # /license/
-  # 右侧链接，可以放备案号
+  ## 右侧链接，可以放备案号
   links:
     - name: 主题
       url: https://github.com/talen8/hexo-theme-flecui
     # - name: 名称
     #   url: 跳转链接
-# 页脚配置 Footer Settings # end
+# 页脚配置@end
 
-# 404页面 404page # start
+# 主题配色@start
+theme_color:
+  dark: "#DEB247" # 暗色模式
+  dark_op: "#DEB24723" # 暗色模式透明
+  dark_op_deep: "#DEB247DD" # 暗色模式透明深色
+  dark_none: "#DEB24700" # 暗色模式透明无色
+  light: "#8042EF" # 亮色模式
+  light_op: "#8042EF23" # 亮色模式透明
+  light_op_deep: "#8042EFDD" # 亮色模式透明深色
+  light_none: "#8042EF01" # 亮色模式透明无色
+# 主题配色@end
+
+# 主题显示模式@start
+display_mode:
+  type: auto # 模式选择  auto 自动切换 | dark 暗色模式 | light 亮色模式
+  universe: true # 星空背景，仅深色模式下生效
+# 主题显示模式@end
+
+# 文底推荐文章@start
+related_post:
+  enable: false
+  limit: 2 # 推荐文章数量
+  date_type: created # 推荐依据  created 创建日期 | updated 更新日期
+# 文底推荐文章@end
+
+# 加载动画@start
+loading:
+  ## 全局加载动画
+  fullpage:
+    enable: true
+    image: /img/avatar.png
+  ## 顶部加载胶囊
+  pace: true
+# 加载动画@end
+
+# 中控台扩展@start
+console_plus: false
+# 中控台扩展@end
+
+# 右键菜单@start
+right_menu:
+  enable: false # 是否开启
+  commentBarrage: false # 是否显示热评开关
+  ## 简繁切换
+  translate:
+    enable: false
+    defaultEncoding: 2 # 默认语言  1：默认繁体 | 2：默认简体
+    translateDelay: 0 # 首次加载翻译迟疑时间
+  ## 自定义菜单项列表
+  custom_list:
+    # - name: 随机短文
+    #   click: toRandomPost()
+    #   id: menu-randomPost
+    #   class:
+    #   icon: flec-dice-line
+    # - name: 全部分类
+    #   click: pjax.loadUrl('/categories/')
+    #   id:
+    #   class:
+    #   icon: flec-checkbox-fill
+    # - name: 全部标签
+    #   click: pjax.loadUrl('/tags/')
+    #   id:
+    #   class:
+    #   icon: flec-price-tag-fill
+    # - name: 赞助主题
+    #   click: window.open('https://afdian.net/a/talen/', '_blank') # 外链用 window.open，pjax 无法请求跨域内容
+    #   id:
+    #   class:
+    #   icon: flec-afdian-line
+# 右键菜单@end
+
+# 复制@start
+copy:
+  enable: false # 是否开启
+  ## 增加版权信息
+  copyright:
+    enable: false
+    limit: 50 # 字数超过时生效
+# 复制@end
+
+# 代码块@start
+highlight:
+  enable: true
+  limit: 200 # 代码行高限制
+  copy: true # 是否开启复制按钮
+  expand: true # 是否默认展开
+  theme: default # 代码块样式  default 默认 | mac 苹果终端
+  color: default # 代码配色  default | dark | funky | okaidia | tomorrow | twilight | darcula | solarized-dark | solarized-light | material | github
+# 代码块@end
+
+# 图片灯箱（Fancybox）@start
+# 介绍：https://fancyapps.com/fancybox/
+lightbox: false
+# 图片灯箱（Fancybox）@end
+
+# Mermaid标签@start
+# 介绍：https://mermaid.js.org/
+mermaid: false
+# Mermaid标签@end
+
+# 快捷菜单@start
+keyboard:
+  enable: false
+  ## 键盘控制配置
+  list:
+    # - name: 按键名称
+    #   key: 按键
+    #   func: 方法
+    #   flec: flec内置方法(flec.'function')
+    #   url: 跳转链接
+    - name: 关闭快捷键功能
+      key: K
+      func: keyboard
+    - name: 打开中控台
+      key: A
+      flec: showConsole
+    - name: 播放/暂停音乐
+      key: M
+      flec: musicToggle
+    - name: 打开友情链接
+      key: L
+      url: "/links/"
+# 快捷菜单@end
+
+# 懒加载@start
+lazyload:
+  enable: false
+  field: site # 作用页面  post 仅文章页面使用 | site 全站页面使用
+  placeholder: /img/loading.gif # 加载中显示图片
+  errorimg: /img/error_load.webp # 加载失败显示图片
+# 懒加载@end
+
+# 字体@start
+font:
+  font-size: 16px # 字体大小
+  code-font-size: 16px # 代码字体大小
+  font-family: 'PingFang SC,Hiragino Sans GB,Microsoft YaHei' # 字体
+  code-font-family: 'monospace, monospace' # 代码字体
+# 字体@end
+
+# LaTeX公式@start
+katex:
+  enable: false
+  per_page: false # 是否在每页都加载
+  copytex: false # 是否开启复制公式
+# LaTeX公式@end
+
+# 音乐胶囊@start
+capsule:
+  enable: false
+  id: 1994908354 # 歌单id
+  server: netease # 播放列表的服务商  netease：网易云 | tencent：腾讯 | ytmusic：YouTube Music | spotify：Spotify
+  type: playlist # 播放列表的类型  song：单曲 | playlist：歌单 | album：专辑 | artist：歌手
+# 音乐胶囊@end
+
+# 访问统计@start
+busuanzi: false # 是否开启统计
+busuanzi_use: 0 # 统计来源  0：原版 | 1：青秸(other: 其它自定义的busuanzi平台)
+# 访问统计@end
+
+# 字数统计@start
+# 开启前需安装字数统计插件
+wordcount: false
+# 字数统计@end
+
+# 网页黑白@start
+memorial:
+  enable: false
+  # 日期, (M-D)
+  date:
+    - "7-8" #七八卢沟桥事变
+    - "9-18" #九一八事变/建军节
+    - "12-13" #南京国家公祭日
+# 网页黑白@end
+
+# Open Graph@start
+# 介绍：https://ogp.me/
+# 使用：https://developers.facebook.com/docs/sharing/webmasters/
+OpenGraph:
+  enable: false
+  ## 分享设置选项
+  options:
+  #  twitter_card:
+  #  twitter_image:
+  #  twitter_id:
+  #  twitter_site:
+  #  google_plus:
+  #  fb_admins:
+  #  fb_app_id:
+# Open Graph@end
+
+# 评论@start
+comment:
+  use: # 选择评论系统  waline, twikoo, valine, artalk
+  commentBarrage: false # 热评开关
+  lazyload: false # 懒加载
+  count: false # 评论数展示
+  pv: false # 是否使用评论系统统计页面访问量
+  avatar: https://cravatar.cn # 评论用户头像
+  ## 最新评论
+  newest_comment:
+    enable: true
+    storage: .5 # 缓存时间，单位为天
+# 评论@end
+
+# twikoo 配置信息
+twikoo: # https://twikoo.js.org/
+  envId: # url: https://twikoo.sondy.top/
+  region: # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+  style: true # 开启后使用自定义样式
+  accessToken: # AccessToken
+  option: # twikoo option
+
+# waline 配置信息
+waline: # https://waline.js.org/
+  envId:  # url: https://waline.wzsco.top
+  pageview: false # 是否开启页面访问量统计
+  option: # waline配置项
+
+# valine 配置信息
+valine:
+  appId: # leancloud application app id
+  appKey: # leancloud application app key
+  serverURLs: # 此配置适用于国内自定义域名用户，海外版本将自动检测
+  avatar: # https://valine.js.org/avatar.html
+  visitor: false
+  style: true # 开启后使用自定义样式
+  option: # options list
+
+# artalk 配置信息
+artalk:
+  server: # 后端地址
+  site: # 站点名
+  option: # options
+
+# 搜索@start
+search:
+  ## 开启前需安装搜索插件
+  enable: false
+  type: local # 搜索方式  algolia：Algolia搜索 | local：本地搜索
+  ## 推荐标签
+  tags:
+    - FlecUI
+    - Hexo
+  ## Algolia搜索配置
+  algolia:
+    ## 每页显示的搜索条数
+    hits:
+      per_page: 6
+  ## 本地搜索配置
+  local:
+    ## 是否启用预加载
+    preload: false
+    CDN:
+# 搜索@end
+
+# Post Chat AI@start
+# 后台地址：https://ai.tianli0.top/
+tianli_talk:
+  enable: false
+  title: 智能客服与搜索 # 标题
+  key:  # 购买的Key
+  ## 自定义选项，参考https://ai.tianli0.top/codeMaker.html，不填则使用默认值
+  option:
+    # defaultInput: false
+    # upLoadWeb: true
+    # userTitle: Flec Chat
+    # userDesc: 你好，我是 Flec 智能客服，有什么可以帮助你的？
+    # showInviteLink: ''
+    # blackDom:
+    #   - .aplayer
+# Post Chat AI@end
+
+# 文章摘要AI@start
+post_ai:
+  enable: false
+  modelName: FlecGPT # 右侧模型名称
+  key: # Key
+  talk: 我是AI摘要生成助理FlecGPT，FlecGPT在静态部署时进行摘要的撰写，并且在访客访问时通过转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。 # 自介
+  randomPost: false # 随机文章按钮
+  report:  # 举报链接，不填不显示
+  tips: 此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结 # 底部提示
+# 文章摘要AI@end
+
+# 站点验证@start
+verify_site:
+  # - name: baidu-site-verification
+  #   content: xxxxxxxxxxxx
+  # - name: msvalidate.01
+  #   content: xxxxxxxxxxxx
+  # - name: google-site-verification
+  #   content: xxxxxxxxxxxx
+# 站点验证@end
+
+# CSS前缀@start
+# 开启后可增强浏览器兼容性，但会增加20%的体积
+css_prefix: false
+# CSS前缀@end
+
+# PWA@start
+# 介绍：https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps
+pwa:
+  enable: false
+  manifest: /manifest.json # manifest.json 文件路径
+  theme_color: "#006a73" # 主题颜色
+  mask_icon: /img/pwa/favicon.ico # 遮罩图标
+  apple_touch_icon: /img/pwa/favicon.ico # 苹果触摸图标
+  bookmark_icon: /img/pwa/favicon.ico # 书签图标
+  favicon_32_32: /img/pwa/favicon_32.ico # 32x32图标
+  favicon_16_16: /img/pwa/favicon_16.ico # 16x16图标
+# PWA@end
+
+# 谷歌广告@start
+google_adsense:
+  enable: false
+  auto_ads: false # 自动广告
+  enable_page_level_ads: true # 页面级广告
+  aside_card: true # 侧边栏卡片广告，需在aside中添加ads
+  post_card: true # 文章卡片广告（首页文章列表）
+  post_content: true # 文章内容广告（文章内容底部广告）
+  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js # 谷歌广告js
+  client: ca-pub-XXXXXXXXXXXXXX # client id
+  slot: 123456789 # slot id，需在关闭自动广告时填写
+# 谷歌广告@end
+
+# 404页面@start
 errorpage:
-  ## 图片
-  img: /img/404.png
-  ## 文字
-  text: 糟糕 页面走丢了
-  ## 推荐文章列表
-  recommendList: true
-# 404页面 404page # end
+  img: /img/404.png # 图片
+  text: 糟糕 页面走丢了 # 文字
+  recommendList: true # 推荐文章列表
+# 404页面@end
 
-# 订阅页面 Subscription page # start
+# 订阅页面@start
 subscribe:
   ## 是否开启，开启前需完成相关配置
   enable: false
-  follow: https://api.follow.it/subscription-form/NnBzNHBHZmFFbVFjMjliQWhSc1pmTVZSYklEU1V6V1lrdlVOSkY0T2RZV3hISHpsbGlOaHNYR2RoWlN4R3M2OXRZTUg3TDY5K1luWEY4M0V0ZXphOGlUSGFJSko2ZExXcnIrK0xmMFlFUzFHcjJjeDZYY2RqZ1BycnoyNWtUSEp8dXVKZE51b29CdWlIc2lrT2xWdzJ2UzNkRlJpb3Q0ZTlvbzF3TEcwMXJjRT0=/8
-# 订阅页面 Subscription page # end
+  follow: https://api.follow.it/subscription-form/xxxxx=/8
+# 订阅页面@end
 
-# 即刻短文 talk now # start
+# 即刻短文@start
 says:
   ## 是否开启，开启前需完成相关配置
   enable: false
-  ## 展示条数
-  strip: 30
-  ## 主页轮播条
-  home_mini: false
-  ## 样式
-  style: 0    # 0:默认样式
-# 即刻短文 talk now # end
+  strip: 30 # 展示条数
+  home_mini: false # 主页轮播条
+  style: 0 # 样式  0:默认样式
+# 即刻短文@end
 
-# 相册 albums # start
+# 相册@start
 # photo相册页，开启前需完成相关配置
 photo: 
   enable: false
@@ -490,23 +723,18 @@ album:
     link: /photos/ || 相册
   # 相册加载loading图标
   loading: /img/loading.gif
-# 相册 albums # end
+# 相册@end
 
-# 最近评论 recent comments # start
+# 最近评论@start
 recent_comments:
-  ## 是否开启，开启前需完成相关配置
-  enable: false
-  ## 评论数，waline最多支持50条
-  limit: 50
-  ## 缓存时间，单位为天
-  cache: 0.2
-  ## 控制台按钮
-  console: true
-  ## 最近评论页面
-  page: /recentcomments/
-# 最近评论 recent comments # end
+  enable: false # 是否开启，开启前需完成相关配置
+  limit: 50 # 评论数，waline最多支持50条
+  cache: 0.2 # 缓存时间，单位为天
+  console: false # 控制台按钮
+  page: /recentcomments/ # 最近评论页面
+# 最近评论@end
 
-# 留言板 message board # start
+# 留言板@start
 envelope:
   ## 是否开启，开启前需完成相关配置
   enable: false
@@ -515,12 +743,11 @@ envelope:
   hover: true # 鼠标悬停暂停
   loop: true # 循环播放
   page: /message/ # 留言板页面
-# 留言板 message board # end
+# 留言板@end
 
-# 音乐 music # start
+# 音乐页面@start
 # meeting-api，用于音乐胶囊和音乐馆页
 meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r"
-# 音乐馆页
 music:
   enable: false
   ## 音乐ID  歌单ID | 专辑ID | 歌手ID
@@ -533,366 +760,18 @@ music:
   volume: 0.8
   ## 互斥模式，即同时只能有一个播放器播放
   mutex: true
+# 音乐页面@end
 
-# 音乐胶囊
-capsule:
-  enable: false
-  ## 歌单id
-  id: 1994908354
-  ## 播放列表的服务商    netease：网易云 | tencent：腾讯 | ytmusic：YouTube Music | spotify：Spotify
-  server: netease
-  ## 播放列表的类型    song：单曲 | playlist：歌单 | album：专辑 | artist：歌手
-  type: playlist
-# 音乐 music # end
-
-# 快捷菜单 quick menu # start
-keyboard:
-  enable: false
-  ## 键盘控制配置
-  list:
-    # - name: 按键名称
-    #   key: 按键
-    #   func: 方法
-    #   flec: flec内置方法(flec.'function')
-    #   url: 跳转链接
-    - name: 关闭快捷键功能
-      key: K
-      func: keyboard
-    - name: 打开中控台
-      key: A
-      flec: showConsole
-    - name: 播放/暂停音乐
-      key: M
-      flec: musicToggle
-    - name: 打开友情链接
-      key: L
-      url: "/links/"
-# 快捷菜单 quick menu # end
-
-# 复制 Copy # start
-copy:
-  enable: false
-  ## 增加版权信息
-  copyright:
-    enable: false
-    ## 字数，超过时生效
-    limit: 50
-# 复制 Copy # end
-
-# 懒加载 lazyload # start
-lazyload:
-  enable: false
-  ## 作用页面
-  field: site  # post 仅文章页面使用 | site 全站页面使用
-  ## 加载中显示图片
-  placeholder: /img/loading.gif
-  ## 加载失败显示图片
-  errorimg: /img/error_load.webp
-# 懒加载 lazyload # end
-
-# 加载动画 loading animation # start
-loading:
-  ## 全局加载动画
-  # fullpage: false
-  fullpage:
-    enable: true
-    image: /img/avatar.png
-  ## 顶部加载胶囊
-  pace: true
-# 加载动画 loading animation # end
-
-# 代码高亮 code highlight # start
-highlight:
-  enable: true
-  ## 代码行高限制
-  limit: 200
-  ## 是否开启复制按钮
-  copy: true
-  ## 是否默认展开
-  expand: true
-  ## 代码块样式
-  theme: default  # default 默认 | mac 苹果终端
-  ## 代码配色
-  color: default  # default: 默认 | dark | funky | okaidia | tomorrow | twilight | darcula | solarized-dark | solarized-light | material | github
-# 代码高亮 code highlight # end
-
-# 图片灯箱（fancybox） image lightbox # start
-# 介绍：https://fancyapps.com/fancybox/
-lightbox: false
-# 图片灯箱（fancybox） image lightbox # end
-
-# mermaid标签插件 tags plugin # start
-# 介绍：https://mermaid.js.org/
-mermaid: false
-# mermaid标签插件 tags plugin # end
-
-# Open Graph-社交分享 # start
-# 介绍：https://ogp.me/
-# 使用：https://developers.facebook.com/docs/sharing/webmasters/
-OpenGraph:
-  enable: false
-  ## 分享设置选项
-  options:
-  #  twitter_card:
-  #  twitter_image:
-  #  twitter_id:
-  #  twitter_site:
-  #  google_plus:
-  #  fb_admins:
-  #  fb_app_id:
-# Open Graph-社交分享 # end
-
-# 字数统计 word count # start
-# 是否开启，开启前需安装字数统计插件
-wordcount: false
-# 字数统计 word count # end
-
-# 访问统计 access statistics # start
-## 是否开启统计
-busuanzi: false
-## 统计来源
-busuanzi_use: 0    # 0：原版 | 1：青秸(other: 其它自定义的busuanzi平台)
-# 访问统计 access statistics # end
-
-# 搜索 search # start
-# 是否开启，开启前需安装搜索插件
-search:
-  enable: false
-  ## 搜索方式
-  type: local  # algolia：Algolia搜索 | local：本地搜索
-  ## 推荐标签
-  tags:
-    - FlecUI
-    - Hexo
-  ## Algolia搜索配置
-  algolia:
-    ## 每页显示的搜索条数
-    hits:
-      per_page: 6
-  ## 本地搜索配置
-  local:
-    ## 是否启用预加载
-    preload: false
-    CDN:
-# 搜索 search # end
-
-# Post Chat AI # start
-# 后台地址：https://ai.tianli0.top/
-tianli_talk:
-  enable: false
-  ## 标题
-  title: 智能客服与搜索
-  ## 购买的Key
-  key: 
-  ## 自定义选项，参考https://ai.tianli0.top/codeMaker.html，不填则使用默认值
-  option:
-    # defaultInput: false
-    # upLoadWeb: true
-    # userTitle: Flec Chat
-    # userDesc: 你好，我是 Flec 智能客服，有什么可以帮助你的？
-    # showInviteLink: ''
-    # blackDom:
-    #   - .aplayer
-# Post Chat AI # end
-
-# 文章摘要AI post abstract AI # start
-post_ai:
-  enable: false
-  ## 右侧模型名称
-  modelName: FlecGPT
-  ## Key
-  key:
-  ## 自介
-  talk: 我是AI摘要生成助理FlecGPT，FlecGPT在静态部署时进行摘要的撰写，并且在访客访问时通过转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。
-  ## 随机文章按钮
-  randomPost: false
-  ## 举报链接，不填不显示
-  report: 
-  ## 底部提示
-  tips: 此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结
-# 文章摘要AI post abstract AI # end
-
-# latex公式支持 formula support # start
-katex:
-  enable: false
-  ## 是否在每页都加载
-  per_page: false
-  ## 是否开启复制公式
-  copytex: false
-# latex公式支持 formula support # end
-
-# 评论 comment # start
-comment:
-  ## 选择评论系统
-  use: # waline, twikoo, valine, artalk
-  ## 热评开关
-  commentBarrage: false
-  ## 懒加载
-  lazyload: false
-  ## 评论数展示
-  count: false
-  ## 是否使用评论系统统计页面访问量
-  pv: false
-  ## 评论用户头像
-  avatar: https://cravatar.cn
-  ## 最新评论
-  newest_comment:
-    enable: false
-    ## 缓存时间，单位为天
-    storage: .5
-
-# twikoo 配置信息
-twikoo: # https://twikoo.js.org/
-  envId: # url: https://twikoo.sondy.top/
-  region: # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-  style: true # 开启后使用自定义样式
-  accessToken: # AccessToken
-  option: # twikoo option
-
-# waline 配置信息
-waline: # https://waline.js.org/
-  envId:  # url: https://waline.wzsco.top
-  pageview: false # 是否开启页面访问量统计
-  option: # waline配置项
-
-# valine 配置信息
-valine:
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
-  serverURLs: # 此配置适用于国内自定义域名用户，海外版本将自动检测
-  avatar: # https://valine.js.org/avatar.html
-  visitor: false
-  style: true # 开启后使用自定义样式
-  option: # options list
-
-# artalk 配置信息
-artalk:
-  server: # 后端地址
-  site: # 站点名
-  option: # options
-# 评论 comment # end
-
-# 中控台扩展 Center console expansion # start
-# 最新评论 + 标签 + 文章
-console_plus: false
-# 中控台扩展 Center console expansion # end
-
-# 站点验证 Site verification # start
-verify_site:
-  # - name: baidu-site-verification
-  #   content: xxxxxxxxxxxx
-  # - name: msvalidate.01
-  #   content: xxxxxxxxxxxx
-  # - name: google-site-verification
-  #   content: xxxxxxxxxxxx
-# 站点验证 Site verification # end
-
-# CSS 前缀 Prefix # start
-# 开启后可增强浏览器兼容性，但会增加20%的体积
-css_prefix: false
-# CSS 前缀 Prefix # end
-
-# 字体 Font # start
-font:
-  ## 字体大小
-  font-size: 16px
-  ## 代码字体大小
-  code-font-size: 16px
-  ## 字体
-  font-family: 'PingFang SC,Hiragino Sans GB,Microsoft YaHei'
-  ## 代码字体
-  code-font-family: 'monospace, monospace'
-# 字体 Font # end
-
-# PWA # start
-# 介绍：https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps
-pwa:
-  enable: false
-  manifest: /manifest.json # manifest.json 文件路径
-  theme_color: "#006a73" # 主题颜色
-  mask_icon: /img/pwa/favicon.ico # 遮罩图标
-  apple_touch_icon: /img/pwa/favicon.ico # 苹果触摸图标
-  bookmark_icon: /img/pwa/favicon.ico # 书签图标
-  favicon_32_32: /img/pwa/favicon_32.ico # 32x32图标
-  favicon_16_16: /img/pwa/favicon_16.ico # 16x16图标
-# PWA # end
-
-# 谷歌广告 Google Adsense # start
-google_adsense:
-  enable: false
-  ## 自动广告
-  auto_ads: false
-  ## 页面级广告
-  enable_page_level_ads: true
-  ## 侧边栏卡片广告，需在aside中添加ads
-  aside_card: true
-  ## 文章卡片广告（首页文章列表）
-  post_card: true
-  ## 文章内容广告（文章内容底部广告）
-  post_content: true
-  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js # 谷歌广告js
-  ## client id
-  client:  # ca-pub-XXXXXXXXXXXXXX
-  ## slot id，需在关闭自动广告时填写
-  slot:  # 123456789
-# 谷歌广告 Google Adsense # end
-
-# 自定义右键菜单 Custom Right Menu # start
-right_menu:
-  enable: false
-  ## 是否显示热评开关
-  commentBarrage: false
-  ## 简繁切换
-  translate:
-    enable: false
-    ## 默认语言
-    defaultEncoding: 2  # 1：默认繁体 | 2：默认简体
-    ## 首次加载翻译迟疑时间
-    translateDelay: 0
-  ## 自定义菜单项列表
-  custom_list:
-    # - name: 随机短文
-    #   click: toRandomPost()
-    #   id: menu-randomPost
-    #   class:
-    #   icon: flec-dice-line
-    # - name: 全部分类
-    #   click: pjax.loadUrl('/categories/')
-    #   id:
-    #   class:
-    #   icon: flec-checkbox-fill
-    # - name: 全部标签
-    #   click: pjax.loadUrl('/tags/')
-    #   id:
-    #   class:
-    #   icon: flec-price-tag-fill
-    # - name: 赞助主题
-    #   click: window.open('https://afdian.net/a/talen/', '_blank') # 外链用 window.open，pjax 无法请求跨域内容
-    #   id:
-    #   class:
-    #   icon: flec-afdian-line
-# 自定义右键菜单 Custom Right Menu # end
-
-# 网页黑白 Web page black and white # start
-memorial:
-  enable: false
-  # 日期, (M-D)
-  date:
-    - "7-8" #七八卢沟桥事变
-    - "9-18" #九一八事变/建军节
-    - "12-13" #南京国家公祭日
-# 网页黑白 Web page black and white # end
-
-# 插入代码 Insert code # start
+# 插入代码@start
 extends:
   ## 在head中插入
   head:
     # - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
   ## 在body中插入
   body:
-# 插入代码 Insert code # end
+# 插入代码@end
 
-# CDN # start
+# CDN@start
 CDN:
   ## 主题内js的cdn配置
   internal: local  # local/jsdelivr/unpkg/cdnjs/custom
@@ -923,4 +802,4 @@ CDN:
     # swiper_js:
     # busuanzi_js:
     # snackbar_js:
-# CDN # end
+# CDN@end
