@@ -72,6 +72,9 @@
     +maxWidth1300()
       width 100%
       margin 0
+  if !hexo-config('comment.newest_comment.enable')
+    .console-card-group-right
+      width 100% !important
 
   .console-card
     background var(--flec-maskbg)

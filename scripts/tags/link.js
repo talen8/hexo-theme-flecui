@@ -6,7 +6,7 @@ function link(args) {
     let sitename = args[1];
     let link = args[2];
     let imgUrl = args[3] || "";
-    let favicon = themeConfig.site.siteIcon;
+    let favicon = themeConfig.site.favicon;
     let insideStation = false;
 
     link = link.trim();

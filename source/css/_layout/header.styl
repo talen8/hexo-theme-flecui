@@ -361,7 +361,7 @@
         line-height 1
         color var(--flec-card-bg)
 
-    if hexo-config('site.name.class') == i_class
+    if hexo-config('nav.logo.class') == i_class
       i
         font-size 16px
         line-height 35px
@@ -374,7 +374,7 @@
           opacity 1
           transition all .3s, color 0s, opacity .3s
 
-    if hexo-config('site.name.class') == text
+    if hexo-config('nav.logo.class') == text
       span.title
         letter-spacing normal
         font-size 1rem
@@ -384,7 +384,7 @@
         +maxWidth768()
           padding-left 8px
 
-    if hexo-config('site.name.class') == img
+    if hexo-config('nav.logo.class') == img
       img
         max-width 120px
         max-height 35px
