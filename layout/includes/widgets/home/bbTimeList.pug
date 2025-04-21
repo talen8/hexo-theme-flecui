@@ -1,18 +1,32 @@
 .bbTimeList.container#bbTimeList(class=is_home_first_page() ? '' : 'more-page')
     i.bber-logo.flecicon.flec-jike(onclick=`pjax.loadUrl('/essay/')`)
     .swiper-container.swiper-no-swiping.swiper-container-initialized.swiper-container-vertical.swiper-container-pointer-events#bbtalk(tabindex="-1" onclick=`pjax.loadUrl('/essay/')`)
-        .swiper-wrapper#bber-talk
-            .li-style.bber-loading(style="text-align: center") 正在加载...
-            script.
-                (async function () {
-                    const response = await fetch('!{url_for(theme.says.link)}');
-                    const data = await response.json();
-                    const list = data.slice(0, 10).map(item => {
-                        let data = item.content,
-                            content = data.replace(/#(.*?)\s|\n/g, '').replace(/\!\[(.*?)\]\((.*?)\)/g, '').replace(/\{(.*?)\}/g, '').replace(/(?<!\!)\[(.*?)\]\((.*?)\)/g, '').trim();
-                            type = data.match(/\!\[(.*?)\]\((.*?)\)/g) ? '【图片】' : data.match(/{\s*music\s*(.*?)\s*(.*?)\s*}/g) ? '【音乐】' : data.match(/{\s*player\s*(.*)\s*}/g) || data.match(/{\s*bilibili\s*(.*?)\s*}/g) ? '【视频】' : '';
-                        return `<div class="li-style swiper-slide">${content + type}</div>`
-                    });
-                    document.querySelector('#bber-talk').innerHTML = list.join(' ');
-                })()
+        if theme.says.source === 'memos'
+            .swiper-wrapper#bber-talk
+                .li-style.bber-loading(style="text-align: center") 正在加载...
+                script.
+                    (async function () {
+                        const response = await fetch('!{url_for(theme.says.link)}');
+                        const data = await response.json();
+                        const list = data.slice(0, 10).map(item => {
+                            let data = item.content,
+                                content = data.replace(/#(.*?)\s|\n/g, '').replace(/\!\[(.*?)\]\((.*?)\)/g, '').replace(/\{(.*?)\}/g, '').replace(/(?<!\!)\[(.*?)\]\((.*?)\)/g, '').trim();
+                                type = data.match(/\!\[(.*?)\]\((.*?)\)/g) ? '【图片】' : data.match(/{\s*music\s*(.*?)\s*(.*?)\s*}/g) ? '【音乐】' : data.match(/{\s*player\s*(.*)\s*}/g) || data.match(/{\s*bilibili\s*(.*?)\s*}/g) ? '【视频】' : '';
+                            return `<div class="li-style swiper-slide">${content + type}</div>`
+                        });
+                        document.querySelector('#bber-talk').innerHTML = list.join(' ');
+                    })()
+        if theme.says.source === 'json'
+            .swiper-wrapper#bber-talk
+                .li-style.bber-loading(style="text-align: center") 正在加载...
+                script.
+                    (async function () {
+                        const response = await fetch('!{url_for(theme.says.link)}');
+                        const data = await response.json();
+                        const list = data[0].essay_list.slice(0, 10).map(item => {
+                            let type = item.image ? '【图片】' : item.aplayer ? '【音乐】' : item.video ? '【视频】' : '';
+                            return `<div class="li-style swiper-slide">${item.content + type}</div>`
+                        });
+                        document.querySelector('#bber-talk').innerHTML = list.join(' ');
+                    })()
     i.bber-gotobb.flecicon.flec-right-btn-fill(title=_p('home.bbtime.text') onclick=`pjax.loadUrl('/essay/')`)

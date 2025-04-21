@@ -67,43 +67,43 @@ hometop:
       #   img: 图片
       #   color: 背景色
       # HTML:
-      #   img: https://txycos.talen.top/skill/HTML.png
+      #   img: https://image.talen.top/skill/HTML.png
       #   color: '#e9572b'
       # CSS:
-      #   img: https://txycos.talen.top/skill/CSS.png
+      #   img: https://image.talen.top/skill/CSS.png
       #   color: '#264de4'
       # JavaScript:
-      #   img: https://txycos.talen.top/skill/JavaScript.png
+      #   img: https://image.talen.top/skill/JavaScript.png
       #   color: '#f7cb4f'
       # Git:
-      #   img: https://txycos.talen.top/skill/Git.png
+      #   img: https://image.talen.top/skill/Git.png
       #   color: '#df5b40'
       # Docker:
-      #   img: https://txycos.talen.top/skill/Docker.png
+      #   img: https://image.talen.top/skill/Docker.png
       #   color: '#57b6e6'
       # Vue:
-      #   img: https://txycos.talen.top/skill/Vue.png
+      #   img: https://image.talen.top/skill/Vue.png
       #   color: '#ffffff'
       # Python:
-      #   img: https://txycos.talen.top/skill/Python.png
+      #   img: https://image.talen.top/skill/Python.png
       #   color: '#ffffff'
       # Linux:
-      #   img: https://txycos.talen.top/skill/Linux.png
+      #   img: https://image.talen.top/skill/Linux.png
       #   color: '#ffffff'
       # Photoshop:
-      #   img: https://txycos.talen.top/skill/Photoshop.png
+      #   img: https://image.talen.top/skill/Photoshop.png
       #   color: '#31a8ff'
       # PremierePro:
-      #   img: https://txycos.talen.top/skill/PremierePro.png
+      #   img: https://image.talen.top/skill/PremierePro.png
       #   color: '#9999ff'
       # AfterEffects:
-      #   img: https://txycos.talen.top/skill/AfterEffects.png
+      #   img: https://image.talen.top/skill/AfterEffects.png
       #   color: '#9999ff'
       # Illustrator:
-      #   img: https://txycos.talen.top/skill/Illustrator.png
+      #   img: https://image.talen.top/skill/Illustrator.png
       #   color: '#ff9a00'
       # LightroomClassic:
-      #   img: https://txycos.talen.top/skill/LightroomClassic.png
+      #   img: https://image.talen.top/skill/LightroomClassic.png
       #   color: '#31a8ff'
   ## 置顶列表（文章的置顶需要在文章front matter中添加“recommend: true”）
   recommendList:
@@ -256,16 +256,16 @@ post:
       #   url: 点击跳转链接
       #   color: 颜色
       - name: 微信
-        qcode: https://txycos.talen.top/web/rewardWechatQR.png
-        url: https://txycos.talen.top/web/rewardWechatQR.png
+        qcode: https://image.talen.top/web/rewardWechatQR.png
+        url: https://image.talen.top/web/rewardWechatQR.png
         color: var(--flec-purple)
       - name: 支付宝
-        qcode: https://txycos.talen.top/web/rewardAlipayQR.png
-        url: https://txycos.talen.top/web/rewardAlipayQR.png
+        qcode: https://image.talen.top/web/rewardAlipayQR.png
+        url: https://image.talen.top/web/rewardAlipayQR.png
         color: var(--flec-black)
       # - name: 爱发电
-      #   qcode: https://txycos.talen.top/web/rewardAfdianQR.png
-      #   url: https://txycos.talen.top/web/rewardAfdianQR.png
+      #   qcode: https://image.talen.top/web/rewardAfdianQR.png
+      #   url: https://image.talen.top/web/rewardAfdianQR.png
       #   color: var(--flec-black)
   ## 分享按钮
   share:
@@ -673,10 +673,12 @@ subscribe:
 says:
   ## 是否开启，开启前需完成相关配置
   enable: false
+  source: json # 数据来源，支持 json 或 memos
   strip: 30 # 展示条数
   home_mini: false # 主页轮播条
   style: 0 # 样式  0:默认样式
-  link: https://example.com/api/v1/memo?creatorId=1&tag=动态 # Memos API
+  link: https://example.com/api/v1/memo?creatorId=1&tag=动态 # source为memos时填写Memos API，为json是填写json文件路径
+  # link: /data/says.json
 # 即刻短文@end
 
 # 相册@start
@@ -780,7 +782,7 @@ CDN:
   custom_format: //open.lightxi.com/cdnjs/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
   ## 覆盖的CDN链接
   option:
-    flecicon_css: https://txycos.talen.top/web/flecicon/iconfont.css
+    flecicon_css: https://image.talen.top/web/flecicon/iconfont.css
     # algolia_search:
     # instantsearch:
     # pjax:
