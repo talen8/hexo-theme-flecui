@@ -67,43 +67,43 @@ hometop:
       #   img: 图片
       #   color: 背景色
       # HTML:
-      #   img: https://image.talen.top/skill/HTML.png
+      #   img: img/skill/HTML.png
       #   color: '#e9572b'
       # CSS:
-      #   img: https://image.talen.top/skill/CSS.png
+      #   img: img/skill/CSS.png
       #   color: '#264de4'
       # JavaScript:
-      #   img: https://image.talen.top/skill/JavaScript.png
+      #   img: img/skill/JavaScript.png
       #   color: '#f7cb4f'
       # Git:
-      #   img: https://image.talen.top/skill/Git.png
+      #   img: img/skill/Git.png
       #   color: '#df5b40'
       # Docker:
-      #   img: https://image.talen.top/skill/Docker.png
+      #   img: img/skill/Docker.png
       #   color: '#57b6e6'
       # Vue:
-      #   img: https://image.talen.top/skill/Vue.png
+      #   img: img/skill/Vue.png
       #   color: '#ffffff'
       # Python:
-      #   img: https://image.talen.top/skill/Python.png
+      #   img: img/skill/Python.png
       #   color: '#ffffff'
       # Linux:
-      #   img: https://image.talen.top/skill/Linux.png
+      #   img: img/skill/Linux.png
       #   color: '#ffffff'
       # Photoshop:
-      #   img: https://image.talen.top/skill/Photoshop.png
+      #   img: img/skill/Photoshop.png
       #   color: '#31a8ff'
       # PremierePro:
-      #   img: https://image.talen.top/skill/PremierePro.png
+      #   img: img/skill/PremierePro.png
       #   color: '#9999ff'
       # AfterEffects:
-      #   img: https://image.talen.top/skill/AfterEffects.png
+      #   img: img/skill/AfterEffects.png
       #   color: '#9999ff'
       # Illustrator:
-      #   img: https://image.talen.top/skill/Illustrator.png
+      #   img: img/skill/Illustrator.png
       #   color: '#ff9a00'
       # LightroomClassic:
-      #   img: https://image.talen.top/skill/LightroomClassic.png
+      #   img: img/skill/LightroomClassic.png
       #   color: '#31a8ff'
   ## 置顶列表（文章的置顶需要在文章front matter中添加“recommend: true”）
   recommendList:
@@ -256,16 +256,16 @@ post:
       #   url: 点击跳转链接
       #   color: 颜色
       - name: 微信
-        qcode: https://image.talen.top/web/rewardWechatQR.png
-        url: https://image.talen.top/web/rewardWechatQR.png
+        qcode: https://image.talen.top/rewardWechatQR.png
+        url: https://image.talen.top/rewardWechatQR.png
         color: var(--flec-purple)
       - name: 支付宝
-        qcode: https://image.talen.top/web/rewardAlipayQR.png
-        url: https://image.talen.top/web/rewardAlipayQR.png
+        qcode: https://image.talen.top/rewardAlipayQR.png
+        url: https://image.talen.top/rewardAlipayQR.png
         color: var(--flec-black)
       # - name: 爱发电
-      #   qcode: https://image.talen.top/web/rewardAfdianQR.png
-      #   url: https://image.talen.top/web/rewardAfdianQR.png
+      #   qcode: https://image.talen.top/rewardAfdianQR.png
+      #   url: https://image.talen.top/rewardAfdianQR.png
       #   color: var(--flec-black)
   ## 分享按钮
   share:
@@ -779,10 +779,10 @@ CDN:
   version: true
   ## 自定义格式
   # 示例: //open.lightxi.com/cdnjs/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: //open.lightxi.com/cdnjs/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
+  custom_format: //cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
   ## 覆盖的CDN链接
   option:
-    flecicon_css: https://image.talen.top/web/flecicon/iconfont.css
+    flecicon_css: /css/icon/iconfont.css
     # algolia_search:
     # instantsearch:
     # pjax:

@@ -1059,7 +1059,7 @@ function cardTimes() {
         lunarMon = chineseLunar.format(lunarDate, "M");
         lunarDay = chineseLunar.format(lunarDate, "d");
 
-        const newYearDate = new Date("2025/01/28 00:00:00");
+        const newYearDate = new Date("2026/02/16 00:00:00");
         const daysUntilNewYear = Math.floor((newYearDate - now) / 1e3 / 60 / 60 / 24);
         asideTime = new Date(`${new Date().getFullYear()}/01/01 00:00:00`);
         asideDay = (now - asideTime) / 1e3 / 60 / 60 / 24;
